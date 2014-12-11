@@ -1,0 +1,166 @@
+body{margin:0px auto;padding:0px;text-align:center;font-size:12px;background:url(background02.jpg) fixed;font-family:微软雅黑}
+div,li{text-align:left}
+input{outline:0px}
+li{list-style-type:none}
+img{border:0px}
+form,ul,h1,h2,h3,h4,h5,p{margin:0px;padding:0px}
+table{border-collapse: collapse}
+a:link {color:#000000; text-decoration:none;}
+a:visited {color:#000000;text-decoration:none;}
+a:hover {color:#0AA2DD; text-decoration:underline;}
+a:active {color:#0AA2DD;}
+
+.a1 a:link {color:#ff0000; text-decoration:none;}
+.a1 a:visited {color:#ff0000;text-decoration:none;}
+.a1 a:hover {color:#ff8800; text-decoration:none;}
+.a1 a:active {color:#ff0000;}
+
+.txt_red{color:#ff0000}
+.txt_red{color:#FF3300;}
+.txt_redB{color:#FF3300;font-weight: bold;}
+.txt_gary{color:#999999;}
+.txt_orange{color:#FF9100;}
+.txt_orangeB {color:#FF9100;font-weight: bold;}
+.txt_orange14B {color:#FF9100;font-weight: bold;font-size: 14px;}
+
+.mg_t1{margin-top:8px}
+.bgcolor1{background-color:#E8F4F6}
+.bgcolor2{background-color:#fff}
+.button1{background: #3199E8;border-radius: 2px;cursor: pointer;border:0px;line-height: 20px;padding:5px 12px;color:#fff}
+.button1x{background: #C5C5C5;border-radius: 2px;border:0px;ine-height: 26px;padding:5px 12px;color:#fff}
+.button2{background: #3199E8;border-radius: 2px;cursor: pointer;border:0px;line-height: 20px;padding:4px 12px;color:#fff}
+.button2x{width:115px;height:30px;background:url(btn_bg2x.png) no-repeat;border:0px;color:#fff;font-size:14px;font-weight:bold;cursor:pointer}
+.button3{background: #3199E8;border-radius: 2px;cursor: pointer;border:0px;line-height: 26px;padding:5px 12px;color:#fff;font-size:22px}
+.button3x{width:135px;height:40px;background:url(btn_bg3x.png) no-repeat;border:0px;color:#666;font-size:22px;font-weight:bold;cursor:pointer}
+.button3y{width:102px;height:40px;background:url(btn_bg3y.png) no-repeat;border:0px;color:#666;font-size:22px;font-weight:bold;cursor:pointer}
+.button4{background: #3199E8;border-radius: 2px;cursor: pointer;border:0px;line-height: 20px;padding:5px 12px;color:#fff}
+.button4y{background: #ff0000;border-radius: 2px;cursor: pointer;border:0px;line-height: 20px;padding:5px 12px;color:#fff}
+.button4x{background: #C5C5C5;border-radius: 2px;border:0px;line-height: 20px;padding:5px 12px;color:#fff;cursor:pointer}
+.button5{background: #3199E8;border-radius: 2px;cursor: pointer;border:0px;line-height: 20px;padding:0px 12px;color:#fff}
+.button5x{background: #C5C5C5;border-radius: 2px;cursor: pointer;border:0px;line-height: 20px;padding:0px 12px;color:#fff}
+.button5y{width:150px;height:21px;background:url(btn_bg5y.png) no-repeat;border:0px;cursor:pointer;}
+
+
+.btn_jian{width:11px;height:11px;background:url(cart_bg4.gif) no-repeat;border:0px;cursor:pointer}
+.btn_jia{width:11px;height:11px;background:url(cart_bg5.gif) no-repeat;border:0px;cursor:pointer}
+
+.top{float:left;width:100%;height:30px;background:#000;padding:0px;color:#fff;margin-bottom:5px}
+.top li{float:left;width:auto}
+.top .x1{padding:8px 0px 0px 10px}
+.top .x1 span{float:left}
+.top .x2{float:right;margin-top:3px}
+.top .xqq{float:left}
+.top .xqq a{width:20px;height:20px;background:url(ico_qq.png) no-repeat;float:left}
+.top .xqq a:hover{width:20px;height:20px;background:url(ico_qq.png) no-repeat 0px -25px;float:left}
+.top .xsina{float:left;padding-top:3px;margin-left:5px}
+.top .xsina a{width:20px;height:20px;background:url(ico_sina.png) no-repeat;float:left}
+.top .xsina a:hover{width:20px;height:20px;background:url(ico_sina.png) no-repeat 0px -22px;float:left}
+.top .x2x{float:left;margin:5px 0px 0px 10px}
+.top .x2x a{color:#fff}
+.top a{color:#ffff00}
+.top .search{float:right;border:1px #000000 solid;background:#EEEEEE;margin:6px 0px 0px 0px;margin-top:10px}
+.top .search .txt1{height:33px;border:0px;width:300px;background:#EEEEEE;font-size:18px;line-height:33px}
+.top .search .btn1{width:39px;height:38px;border:0px;background:url(btn_search.png) no-repeat}
+.top .menu{float:right;}
+
+.xiala{position:absolute;top:60px;width:150px;z-index:10}
+.xiala .x2{float:left;width:140px;background:url(menu_bg1.png) repeat-x 0px bottom;padding-right:10px;text-align:right;height:14px;}
+.xiala .x1{float:left;padding:0px 5px 5px 5px;background:url(menu_bg1.png);width:140px;font-size:14px}
+.xiala .x1 a{float:left;text-decoration:none;float:left;padding:10px 5px 10px 20px;background:#fff;clear:both;height:19px;width:115px}
+.xiala .x1 a:hover{background:#DDDDDD}
+.xiala .x1 img{vertical-align:middle}
+.xiala .x1 .y1{float:left;width:140px;line-height:10px;text-align:center;background:#fff;padding:10px 0px}
+.xiala .x1 .y2{float:left;width:135px;background:#DDDDDD;padding:10px 0px 8px 5px;color:#555}
+.xiala .x3{float:left;padding:0px 5px 5px 5px;background:url(menu_bg1.png);width:140px;font-size:14px}
+.xiala .x3 img{vertical-align:middle}
+.xiala .x3 .y1{float:left;width:140px;line-height:10px;text-align:center;background:#fff;padding:10px 0px}
+.xiala .x3 .y2{float:left;width:135px;background:#DDDDDD;padding:10px 0px 8px 5px;color:#555}
+
+.loginbox{float:left;width:600px}
+.loginbox .xleft{float:left;width:350px}
+.loginbox .xleft li{float:left;width:350px}
+.loginbox .xleft span{float:left;color:#555;margin-top:8px}
+.loginbox .xleft .x1{text-align:right;width:80px;padding:10px 5px 0px 0px;font-size:14px}
+.loginbox .xleft .txt1{width:230px;height:45px;border:1px #000 solid;font-size:18px;padding:0px 5px;line-height:45px}
+.loginbox .xleft .txt2{width:80px;height:45px;border:1px #000 solid;font-size:18px;padding:0px 5px;line-height:45px}
+.loginbox .xleft img{vertical-align:middle}
+.loginbox .xright{float:right;width:150px;color:#555}
+.loginbox .xright li{float:left;width:150px;padding:5px 0px 3px 0px}
+.loginbox .xboot{float:left;width:510px;padding:8px 0px 15px 90px;margin-top:15px;line-height:30px}
+.loginbox .xboot h1{color:#ff0000;width:auto}
+
+.mg1{}
+.w1{width:740px;}
+.h1{float:left;width:100%;height:40px}
+.h10{float:left;width:100%;height:10px}
+.main{width:980px;margin:0px auto}
+.mainbg{float:left;width:980px;*background-color:#CBE7F3;background-color:#CBE7F3\0;background-color: rgba(255, 255, 255, 0.6)}
+.state_bg1{float:left;width:32px;height:19px;background:url(state_bg1.png) no-repeat;padding-top:12px;color:#fff;font-size:12px;text-align:center}
+.state_bg2{float:left;width:32px;height:19px;background:url(state_bg2.png) no-repeat;padding-top:12px;color:#fff;font-size:12px;text-align:center}
+.state_bg3{float:left;width:60px;height:19px;background:url(state_bg3.png) no-repeat;padding-top:12px;color:#fff;font-size:12px;text-align:center}
+.collect1{padding:0px 0px 0px 18px;background:url(collect.png) no-repeat left center;cursor:pointer}
+.collect2{padding:0px 0px 0px 18px;background:url(collect2.png) no-repeat left center;color:#CC0000;cursor:pointer}
+
+.footer{float:left;width:100%;text-align:center;padding:20px 0px;color:#555}
+.footer a{color:#555}
+
+.topmenu{float:left;width:970px;padding:5px}
+.topmenu li{float:left}
+.topmenu .x1{float:right;padding-top:10px}
+.topmenu .x1 a{float:left;padding:10px;font-size:14px;background:#7EC5E3;margin-right:2px;text-decoration:none;color:#fff}
+.topmenu .x1 a:hover{background:#0AA2DD}
+.topmenu .x1 .x2{background:#0AA2DD}
+
+.mleft {width: 242px;overflow: hidden;float:left;padding:0px 0px 10px 8px}
+.mleft .x1 {width: 230px;height: 150px;margin-bottom:10px;float: left;border: 1px solid #ccc;padding: 4px;background-color: #FFFFFF;}
+.mleft .xpic {width: 82px;height: 82px;float: left;border: 1px solid #cccccc;background-color: #FFFFFF;padding: 4px 1px 1px 3px;margin-right: 5px;}
+.mleft .xname {width: 130px;height: 23px;line-height:23px;float: left;}
+.mleft .xvip {width: 130px;height: 22px;line-height:22px;float: left;}
+.mleft .x2 {width: 130px;height: 23px;line-height:23px;float: left;}
+.mleft .x3 {width: 130px;height: 22px;line-height:22px;float: left;}
+.mleft .x4 {width: 230px;height: 19px;line-height:19px;float: left;background: url(load.png) no-repeat 58px 5px;border-top: 1px dashed #cccccc;padding-top: 5px;margin-top: 5px;color: #666666;}
+.mleft .x4 .y1 {width:60px;height: 15px;float: left;padding-top: 2px;}
+.mleft .x4 .y2 {height: 17px;float: left;background: url(load.png) no-repeat 0px -40px;font-family: Tahoma;font-size: 9px;text-align: right;text-indent: 2px;}
+.mleft .x5 {width: 230px;height: 19px;line-height:19px;float: left;border-top: 1px dashed #cccccc;padding-top: 5px;margin-top: 5px;color: #999999;}
+.mleft .x6 {float:left;width:238px;border:1px #ccc solid;background:#fff}
+.mleft .x6 .xtit{float:left;padding:8px 0px 8px 18px;width:220px;background:#F3F3F3;font-weight:bold;font-size:16px}
+.mleft .x6 .xlist{float:left}
+.mleft .x6 .xlist a{float:left;width:193px;padding:8px 0px 8px 45px;border-top:1px #eee solid}
+.mleft .x6 .xlist .xsel{background:url(ico.jpg) no-repeat 20px center;color:#0AA2DD}
+
+.order_verify{float:left;padding:10px;}
+.order_verify li{float:left;width:90%;}
+
+.marea{float:left;width:950px;padding-left:30px;margin:25px 0px 15px 0px;font-size:14px;background:url(position.png) no-repeat 10px center}
+.marea li{float:left;padding:0px 15px 0px 0px;background:url(sort_desc.png) no-repeat right center;cursor:pointer;margin:0px 15px 0px 0px}
+.mareali{position:absolute;background:url(menu_bg1.png);}
+.mareali ul{float:left;width:300px;padding:5px 8px;background:url(menu_bg1.png);}
+.mareali li{float:left;width:150px;margin:3px 0px 2px 0px}
+.mareali a{float:left;width:144px;color:#fff;text-decoration:none;padding:2px 3px}
+.mareali a:hover{background:url(menu_bg1.png);}
+.msearch{float:left;padding: 20px 0px 10px 10px;}
+.msearch .txt1{border:1px #ccc solid;width:925px;height:30px;font-size:18px;line-height:30px;padding:0px 0px 0px 25px;margin:0px;float:left;color:#888;background:#fff url(btn_search3.png) 2px center no-repeat}
+
+.sbox{position:absolute;width:auto;border:1px #ccc solid;border-top:0px}
+.sbox ul{float:left;overflow-y:scroll;overflow-x:hidden;background:#fff}
+.sbox li{font-size:14px;float:left;width:110%;margin:5px 0px 3px 0px;line-height:20px}
+.sbox .xtit{font-weight:bold}
+.sbox a{float:left;margin:0px 0px 0px 20px}
+.sbox span{float:left}
+.sbox .x2{margin-left:5px;color:#82CC77;font-size:12px}
+.sbox .x3{float:right}
+.sbox .xmenu{}
+.sbox .xmenu a{width:230px;margin-right:40px}
+
+
+.page{float:right;clear:both;margin:10px 0px}
+.page li{float:left;}
+.page li a{float:left;padding:3px 8px;font-size:14px;border:1px #eee solid;background:#f8f8f8;margin:0px 2px;color:#888}
+.page li a:hover{background:#3199E8;color:#fff;text-decoration:none;}
+.page .xsel a{background:#3199E8;color:#fff;text-decoration:none;}
+.page .xnone{float:left;color:#888;font-weight:bold;letter-spacing:5px}
+.page .xnone font{float:left;padding:5px 8px}
+.page .xnone a{color:#ccc;background:#f8f8f8;cursor:default}
+.page .xnone a:hover{color:#ccc;background:#f8f8f8;cursor:default}
+
+.qrcode{position:fixed;top:300px}

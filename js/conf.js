@@ -1,0 +1,1 @@
+var web_config = {domain : 'http://mall.meal.kjcms.com',baseurl : 'http://mall.meal.kjcms.com',dirpath : '',basecss : '',cookie_pre : 'kjmall_',rule_uname : '/^[a-z0-9\u4E00-\u9FA5_-]{2,16}$/i',rule_uname_tips : '账号长度在2-16位，不能包函特殊字符',rule_pwd : '/^.{4,16}$/i',rule_pwd_tips : '密码长度必须在4-16之间',verision : 'http://www.kjcms.com3.7',uid : 0,uname : '',isremote : '1',agent : ''};

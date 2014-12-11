@@ -1,0 +1,96 @@
+.tab1{}
+.tab1 .xmenu{float:left;margin:0px 0px 100px 0px;width:100%}
+.tab1 .xmenu li{float:left;margin:10px 0px 0px 15px;font-size:14px}
+.tab1 .xmenu a{color:#fff;float:left}
+.tab1 .xmenu span{float:left;border-right:1px #bbb solid;margin-right:15px;height:12px;margin-top:5px}
+.div1{float:left;width:760px;padding:20px 25px;-moz-border-radius:5px;-webkit-border-radius:5px;background:url(trans1.png);margin-top:10px}
+.div1 ul{float:left;width:760px}
+.div1 .x1{border:1px #999999 solid;width:748px;background:#EEEEEE;padding-left:10px}
+.div1 .x1 .txt1{border:0;width:690px;height:48px;background:#EEEEEE;font-size:18px;padding:0px;margin:0px;float:left;color:#888}
+.div1 .x1 .btn1{width:40px;height:48px;background:url(btn_search2.png) no-repeat center;border:0px;float:left}
+.div1 .x2{background:#fff}
+.div1 .x2 li{float:left;width:760px}
+.div1 .x2 .y1{background:#fff}
+.div1 .x2 .stable{float:left;width:760px;overflow:hidden}
+.div1 .x2 .stable td{text-align:left;padding:5px 0px}
+.div1 .x2 .stable .jian{float:left;text-align:center;font-size:16px}
+.div1 .x2 .y1 a{float:left;width:auto;margin:0px 5px 10px 5px;font-size:14px}
+.div1 .x2 .stable a{color:#666;text-decoration:none;white-space:nowrap;}
+.div1 .x2 .stable .rowsel{}
+.div1 .x2 .stable .rowsel td{background:#efefef}
+.div1 .x2 .stable .rowsel .jian{background:#fff}
+.div1 .x2 .stable .rowsel a{color:#000}
+.div1 .x2 .stable .rowsel a:hover{color:#ff0000}
+.div1 .x2 .y2{background:url(menu_bg1.png);color:#fff;padding:5px 0px 5px 0px}
+.div1 .x2 .y2 a{float:left;padding-left:23px;background:url(arrow2.png) no-repeat -19px 0px;height:19px;font-size:16px;margin-right:10px;color:#fff;text-decoration:none}
+.div1 .x2 .y2 span{float:right;color:#fff;cursor:pointer;font-size:16px;padding:0px 5px 0px 0px}
+.div1 .x3{background:#fff;height:300px;overflow-y:scroll}
+.div1 .x3 a{float:left;width:700px;margin:0px 0px 0px 5px;text-decoration:none;font-size:14px;padding:3px 0px 3px 10px}
+.div1 .x3 a:hover{background:url(menu_bg1.png);color:#fff}
+.div2{float:left;width:804px;overflow:hidden}
+.div2 ul{float:left;width:860px}
+.div2 li{float:left;width:101px;padding:10px 12px;text-align:center;margin:0px 5px;}
+.div2 span{float:left;width:101px;background:#fff}
+.div2 h2{float:left;width:101px;height:40px;color:#fff;padding:3px 0px 3px 0px;font-size:18px}
+.div2 img{width:101px;height:101px}
+.div2 .xsel{background:url(menu_bg1.png);-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}
+.div2 .xs{background:url(menu_bg1.png);-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}
+
+.arealogin{position:absolute}
+.arealogin ul{float:left;background:#DADAD9;padding:5px;width:84px}
+.arealogin li{float:left;width:84px;font-size:14px;text-align:center}
+.arealogin a{text-decoration:none;padding:5px 7px}
+.arealogin .x1 a{float:left;width:70px;background:#DD0000;color:#fff}
+.arealogin .x1 a:hover{float:left;width:70px;background:#BB0000;color:#fff}
+.arealogin .x2{margin-top:5px}
+.arealogin .x2 a{float:left;width:70px;background:#111111;color:#fff}
+.arealogin .x2 a:hover{float:left;width:70px;background:#333333;color:#fff}
+
+
+.title1{float:left;width:970px;padding:8px 0px 5px 10px;border-bottom:1px #000 solid;color:#333}
+.title1 h2{font-weight:200;float:left;}
+.title1 li{float:left;font-size:14px;margin:3px 15px;color:#666;cursor:pointer}
+.title1 .xsel{font-size:16px;margin:0px 8px;color:#000}
+.sortselect .x_sort{float:right;padding:5px 10px 0px 0px}
+.sortselect .x_sort li{float:left;padding:0px 5px;cursor:pointer}
+.sortselect .x_sort .xsel{color:#ff8800}
+.sortselect .x_select{padding:4px 20px 4px 20px;float:left;cursor:pointer;background:url(select.png) no-repeat right center}
+.sortselect .x_selectx{padding:3px 19px 4px 19px;float:left;border:1px #ccc solid;border-bottom:0px;background-color:#F0F0F0}
+.sortselect{float:left;width:970px}
+.sortselect span{float:left;margin:5px 0px 0px 10px}
+
+.title2{float:left;width:970px;padding:5px 0px 3px 10px;color:#333;background:url(dot1.gif) repeat-x 0px 33px}
+.title2 span{float:left;margin:3px 0px 0px 20px;width:83px;height:26px;padding-top:4px;text-align:center;cursor:pointer}
+.title2 .xsel{background:url(collectsel.png) no-repeat;color:#fff}
+
+.listall{float:left;width:980px;overflow:hidden}
+.listall ul{float:left;width:1000px;padding:5px 0px}
+.listall ul .xnone{width:120px;display:block;float:none;padding:8px 20px;margin:20px auto;background-color: #0AA2DD;box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);color:#fff;text-align:center;}
+.listall table{float:left;margin:10px 5px 5px 5px;background: url(list_bg.png) 0 0 repeat;border: 1px solid #D4D4D4}
+.listall .x1{width:56px;text-align:center;padding-top:5px}
+.listall .x1 img{max-width:50px;max-height:50px;_zoom:expression(function(x){if(x.width>50){x.width=50;}if(x.height>50){x.height=50;}}(this));vertical-align:middle}
+.listall .x1 li{float:left;color:#888;border:1px #aaa dotted;width:46px;overflow:hidden;padding:1px;margin-left:3px}
+.listall .x2{float:left;width:123px;height:110px;overflow:hidden}
+.listall .x2 li{float:left;width:140px;margin:0px 0px 5px 0px;color:#666}
+.listall .collect1{float:left;margin:10px 0px 0px 7px}
+.listall .collect2{float:left;margin:10px 0px 0px 7px}
+.listall .xcancel{float:left;margin:10px 0px 0px 7px;color:#ff0000;cursor:pointer}
+.listall .xtit{font-size:14px;font-weight:bold}
+.listall .xtit a{color:#333}
+.listmore{float:left;width:100%;padding:0px 0px 10px 0px;text-align:center}
+.listmore a{display:block;padding:5px 20px;font-size:14px;background-color: #0AA2DD;box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);color:#fff;width:140px;margin:0px auto;text-decoration:none}
+
+.shopinfo{position:absolute;top:0px;left:0px;width:238px}
+.shopinfo .box1{float:left;width:230px;padding:4px;background:url(menu_bg1.png)}
+.shopinfo ul{float:left;width:220px;padding:5px}
+.shopinfo li{float:left;width:220px;margin:5px 0px 5px 0px;backgound:}
+.shopinfo .tit1{float:left;width:220px;padding:5px 0px 5px 0px}
+.shopinfo .info1{float:left;width:220px;padding:5px 0px 0px 0px;line-height:20px}
+.shopinfo .leftx{position:relative;top:50px;left:-9px;width:14px;background:none;height:23px}
+
+.shoptype{float:left;background:#F0F0F0;border:1px #ccc solid}
+.shoptype li{float:left;clear:both;padding:8px 19px 5px 19px;cursor:pointer}
+.shoptype .xsel{background:#7AB0D4}
+
+.ad2{float:left;margin-top:10px;width:1100px}
+.ad2 a{float:left;margin-right:58px}

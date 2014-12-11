@@ -1,0 +1,248 @@
+.slide{float:left;height:200px;overflow:hidden}
+.slide .pic{float:left;width:5000px;height:200px}
+.slide .pic img{width:740px;height:200px}
+.slide .btn{position:relative;top:-25px;width:100%;text-align:center}
+.slide .btn a{float:left;width:48px;height:18px;background:#000;FILTER:alpha(opacity=50);opacity:0.6;margin-left:5px;text-decoration:none}
+.slide .btn a:hover{FILTER:alpha(opacity=100);opacity:1}
+
+.title{float:left;border-bottom:1px #000 solid;padding:10px 0px 5px 0px;}
+.title h1{margin-left:10px;font-weight:200;font-size:20px;float:left}
+.title span{float:left;margin:5px 0px 0px 15px;padding:5px 0px 3px 0px;cursor:pointer}
+.title .sort_asc{color:#ff0000;background:url(sort_up.png) no-repeat right center;padding-right:10px}
+.title .sort_desc{color:#ff0000;background:url(sort_down.png) no-repeat right center;padding-right:10px}
+.list{float:left}
+.list ul{float:left;width:220px;margin:10px 0px 10px 10px;padding:5px}
+.list .x_sel2{background:url(trans1.png);border-radius:5px}
+.list .x_sel2 li{color:#0AA2DD}
+.list li{float:left;width:220px;padding:5px 0px 3px 0px;color:#333}
+.list h2{font-weight:200;font-size:16px}
+.list ul .xnum{background-color:#0AA2DD;*background-color:transparent;float:right;color:#fff;*color:#0AA2DD;border-radius:5px;padding:0px 5px;margin:8px 10px 0px 0px}
+
+.list .pic{width:214px;height:150px;text-align:center;overflow:hidden;padding:1px;overflow:hidden;border:1px #ccc solid;background:#fff}
+.list .pic img{width:214px;height:150px}
+.list li a{color:#333333}
+.list2{float:left;padding-bottom:20px}
+.list2 li{float:left;width:260px;padding:8px 0px 5px 0px;margin-left:20px;cursor:pointer;border-bottom:1px #ccc dotted;height:20px;overflow:hidden}
+.list2 span{float:left;padding:0px 5px}
+.list2 .price{float:right;width:60px;text-align:right}
+.list2 .tit{font-size:14px}
+.list2 .x_sel1{float:left;width:20px;height:20px;background:url(add.gif) no-repeat;padding:0px}
+.list2 .x_sel2{color:#CC0000}
+.list2 .x_nosel{float:left;width:20px;height:20px;padding:0px}
+.list2 .xcomment{width:60px;background:none;margin:0px 30px 0px 0px;color:#666;height:20px;overflow:hidden;text-align:right}
+.list2 .xcomment a{color:#666}
+.list2 .xcomment a:hover{color:#ff8800}
+.list2 .menu_off{color:#aaaaaa;cursor:default}
+.list2 .menu_off .x_off{float:left;margin-left:20px;padding:0px 2px 0px 2px}
+.list2 .xli{width:640px}
+.list2 .xnum{background:#0AA2DD;*background-color:transparent;float:right;color:#fff;border-radius:5px;*color:#0AA2DD}
+.left{float:left;}
+.right{float:left;width:240px;background:#E8F4F6;overflow:hidden}
+.right li{float:left;padding:8px 5px 5px 20px;width:215px;line-height:20px;color:#333}
+.right .pic{width:200px;border:1px #ccc solid;padding:1px;margin:10px 0px 0px 20px;text-align:center;height:200px;vertical-align:middle;line-height:200px}
+.right .pic span{float:left;width:200px;height:200px;line-height:200px}
+.right .pic .xcollect{position:relative;top:-115px;left:75px;z-index:0}
+.right .pic span img{max-width:200px;max-height:200px;_zoom:expression(function(x){if(x.width>200){x.width=200;}if(x.height>200){x.height=200;}}(this));vertical-align:middle}
+.right .info{width:220px;padding:5px 0px 0px 20px;line-height:20px;}
+.right .info .xtit{font-size:18px;width:220px;font-weight:bold}
+.right .info .xtit a{color:#333}
+.right .info .xtit a:hover{color:#ff0000;text-decoration:none}
+.right .info span{float:left;padding:3px 0px 3px 0px;margin-left:10px}
+.right .tit{font-size:14px;font-weight:bold;color:#333;border-bottom:1px #D9D9D9 solid;padding-left:10px;width:230px}
+.right .li{}
+.right .li a{float:left;clear:both;width:200px}
+.right .li2{width:235px;padding:5px 0px 3px 10px}
+.right .xcol1{float:left;width:55px;text-align:right}
+.right .xcol2{float:left;width:140px;padding-left:5px}
+
+.cart_menu{width:980px;position:fixed;color:#fff;font-size:12px}
+.cart_menu span{float:left;text-align:center}
+.cart_menu .x_top{float:left;width:980px;overflow:hidden;background:#222222}
+.cart_menu .x_1{float:left;font-weight:bold;padding:8px 0px 0px 15px}
+.cart_menu .x_2{float:right;padding:12px 0px 0px 15px}
+.cart_menu .x_3{float:right;padding:6px 0px 0px 5px;font-size:20px}
+.cart_menu .x_4{float:right;width:30px;height:34px;background:url(cart_bg2.png) no-repeat center;border-left:1px #222222 solid;cursor:pointer}
+.cart_menu .x_5{float:right;padding:10px 20px 0px 30px;border-right:1px #222222 solid;height:24px;width:83px;background:url(bg3.gif) no-repeat center;color:#000000;cursor:pointer}
+.cart_menu .x_6{float:right;width:30px;height:34px;background:url(cart_bg1.png) no-repeat center;cursor:pointer}
+.cart_menu .x_tit{float:left;color:#888888;border-left:1px #222222 solid;border-right:1px #222222 solid;border-bottom:1px #dddddd solid;height:23px;float:left;width:978px;overflow:hidden;background:#fff;padding-top:5px}
+.cart_menu .x_tit li{float:left;width:970px;padding:5px 0px 3px 8px;color:#555555}
+.cart_menu .x_list{float:left;width:978px;overflow-y:scroll;overflow-x:hidden;height:92px;background:#fff;border-left:1px #222222 solid;border-right:1px #222222 solid}
+.cart_menu .x_list li{float:left;width:970px;padding:5px 0px 3px 8px;color:#555555}
+.cart_menu .col1{width:370px}
+.cart_menu .col2{width:150px}
+.cart_menu .col3{width:150px}
+.cart_menu .col4{width:150px}
+.cart_menu .col5{width:50px;}
+.cart_menu .x_clear{background:url(cart_bg7.gif) no-repeat right;cursor:pointer}
+.cart_menu .x_num{width:20px;height:12px}
+.cart_menu .x_del{width:13px;height:12px;background:url(cart_bg6.gif) no-repeat;border:0px;cursor:pointer}
+.cart_menu .x_listpic{float:left;width:978px;overflow-y:scroll;overflow-x:hidden;height:138px;background:#fff;border-left:1px #222222 solid;border-right:1px #222222 solid}
+.cart_menu .x_listpic li{float:left;padding:5px 0px 3px 8px;color:#555555}
+.cart_menu .x_listpic .col3{padding-top:25px}
+.cart_menu .x_listpic .col4{padding-top:25px}
+.cart_menu .x_listpic .col5{padding-top:25px}
+.cart_menu .x_listpic .x_picli{width:520px}
+.cart_menu .x_listpic .x_picli span{height:60px;width:60px}
+.cart_menu .x_listpic .x_picli .x_plus{background:url(icon_plus.gif) no-repeat center center;width:20px}
+
+
+.orderlist{float:right;width:714px;border:1px solid #CCCCCC;margin:0px 8px 10px 0px}
+.orderlist td{padding:8px 0px 5px 5px;line-height:20px;border:1px solid #CCCCCC;color:#555}
+.orderlist .tit{font-weight:bold;font-size:14px;background:#E8F4F6;text-align:left;color:555}
+.orderlist .col1{width:80px}
+.orderlist .col2{width:80px}
+.orderlist .row1{float:left;width:100%;background:url(dot.gif) repeat-x 0px top;padding:8px 0px 5px 0px}
+.orderlist .row1 .x1{float:left}
+.orderlist .row1 .x1 li{float:left}
+.orderlist .row1 .x2{width:100px;float:right}
+
+.myvip{float:right;width:700px;padding:15px 0px 10px 10px;margin-right:10px}
+.myvip .info{float:left;width:720px;line-height:24px;font-size:14px;color:#333}
+.myvip .process{margin-top:15px;width:678px;float:left;height:13px;border:1px solid #b58c01;border-bottom:1px #848463 solid;background-color:#efe7d6;}
+.myvip .process li{float:left;height: 13px;background:url(Vip_jd.png) repeat-x 0px -60px;font-size: 9px;text-align: right;line-height: 13px;padding-right: 3px;}
+.myvip .process1{width:680px;float:left;height:30px;background-image:url(Vip_dj.gif);background-repeat: no-repeat;}
+.myvip .process2 {width:680px;float:left;height:30px;margin-bottom:20px;}
+.myvip .process2 span{float:left;height:20px;font-size:9px;font-weight:bold;}
+.myvip .tit{width:680px;line-height: 40px;float: left;height: 40px;border-top: 2px solid #CCCCCC;border-bottom: 2px solid #CCCCCC;background-color: #E8F4F6;margin-top:10px}
+.myvip .tit span{width:50px;height:30px;float:left;text-align:center;}
+.myvip .list{width: 680px;height: 30px;float: left;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #CCCCCC;}
+.myvip .list span{float:left;height:20px;line-height:20px;float:left;text-align:center;border-right: 1px solid #CCCCCC;margin-top: 5px;}
+.myvip .list .x1 {width: 150px;color: #999999;}
+.myvip .list .x2 {width: 100px;color:#FF3300;font-weight: bold;}
+.myvip .list .x3 {width: 100px;color: #00bb66;font-weight: bold;}
+.myvip .list .x4 {width: 315px;font-weight: bold;color: #888888;padding-left: 10px;border-right:0px}
+.myvip .list .x5 {width: 100px;font-weight: bold;border-right: 1px solid #CCCCCC;}
+.myvip .list .x6 {width: 215px;color: #888888;padding-left: 10px;;border-right:0px;text-align:left}
+.mymsg{float:right;width:712px;border:1px solid #cccccc;margin:0px 8px 10px 8px}
+.mymsg .info{float:left;width:702px;padding:5px;text-align:left;font-weight:bold;background:#E8F4F6;color:555}
+.mymsg .beta{float:left;width:675px;text-align:left;padding-left:35px;margin-bottom:10px;margin-top:5px;color:#888888}
+.mymsg .content{float:left;width:680px;text-align:left;padding:8px 0px 5px 30px}
+.mymsg .act{float:left;width:694px;text-align:left;padding:8px;border-bottom:1px #cccccc solid}
+.mymsg .return{float:left;width:710px;text-align:left;padding:8px 0px 5px 0px}
+.mymsg .return .return_content{text-align:left;float:left;padding:5px;width:680px;color:#ff8800;border:1px #cccccc dotted;margin-left:30px}
+.mymsg .return .return_beta{width:680px;text-align:left;float:left;padding:5px 0px 0px 30px;color:#888888}
+
+.cartlist{float:left;width:980px}
+.cartlist .xtitle{float:left;width:970px;font-weight:bold;font-size:20px;padding:5px 0px 0px 10px}
+.cartlist .xtitle a{color:#666}
+.cartlist .mlist{float:left;width:960px;margin:10px 0px 0px 10px;border:1px #ccc dotted}
+.cartlist .mlist td{padding:8px 0px 8px 5px;background:#E8F4F6}
+.cartlist .mlist td input{vertical-align:middle}
+.cartlist .mlist .tit{font-size:14px;font-weight:bold;border-bottom:1px #ccc dotted}
+.cartlist .mlist .tit td{background:#E8F4F6;color:#333}
+.cartlist .mlist .sort{width:80px;text-align:center}
+.cartlist .mlist .tit .num{width:120px}
+.cartlist .mlist .tit .count{width:80px}
+.cartlist .mlist .tit .act{width:80px}
+.cartlist .mlist .x_menu{float:left;border:1px #000000 solid;padding:1px;width:50px;height:50px}
+.cartlist .mlist .x_menu img{width:50px;height:50px}
+.cartlist .mlist .x_plus{float:left;background:url(icon_plus.gif) no-repeat center center;width:20px;height:52px;font-size:0px}
+
+.cartlist .mlist td .x_num{width:30px;height:25px;border:1px #999999 solid;text-align:center}
+.cartlist .tabact{float:left;width:960px;margin:10px 0px 0px 10px;line-height:25px}
+.cartlist .tabact .col1{width:100px;text-align:right;line-height:20px;background:#f5f5f5}
+.cartlist .tabact a{color:#666;padding:2px 3px}
+.cartlist .tabact a:hover{color:#000;background:#ccc;padding:2px 3px;text-decoration:none}
+.cartlist .tabact td{padding:8px 10px 8px 5px}
+.cartlist .total{float:left;width:960px;margin:10px 0px 0px 10px;padding:8px 0px 8px 0px;text-align:right;font-size:16px;color:#555}
+.cartlist .total .x_sel1{color:#CA0002}
+.cartlist .total .x_sel2{font-size:18px;color:#CA0002}
+.cartlist .confirm{float:left;margin:10px 0px 20px 130px}
+.cartlist .scoretotal{float:right}
+.cartlist .shopname{float:left;width:100%;margin:10px 0px 5px 0px}
+.cartlist .shopname h2{padding-left:10px}
+#id_address_info{font-size:14px}
+#id_address_info table{width:100%;margin-bottom:10px} 
+#id_address_info .x_sel1{background:#FFEDD4}
+#id_address_info .x_sel1 .x_sel2{color:#83C326;font-weight:bold}
+#id_address_info .x_sel3{color:#FF3300;font-weight:bold}
+#id_address_info td{color:#666}
+#id_address_info .x_sel1 td{color:#333}
+
+.payok{float:left;width:940px;padding:50px 20px 100px 20px}
+.payok .info{float:left;width:368px}
+.payok .info li{float:left;clear:both;margin-top:10px}
+.payok a{vertical-align:bottom;color:#666}
+.payok a:hover{color:#ff0000}
+.tipsred{border:1px #FF9800 solid;background:#FAEEDD;color:#ff0000;text-align:center;width:auto;padding:5px 10px 3px 10px}
+.tipsright{float:left;width:258px;border:1px #7EC5E3 solid;padding:10px 10px 10px 100px;background:url(right.png) no-repeat 20px center;background:#fff}
+.tipserror{float:left;width:258px;border:1px #7EC5E3 solid;padding:10px 10px 10px 100px;background:url(error.png) no-repeat 20px center}
+.tipsright li,.tipserror li{float:left;width:256px;padding:8px 0px 5px 0px;margin:0px;font-size:14px;color:#0AA2DD}
+.tipsblue{float:left;width:363px;border:1px #7EC5E3 solid;padding:3px;margin-top:10px;background:#EAF3E1;color:#0AA2DD}
+
+.findpwd{float:left;width:940px;padding:30px 20px 100px 20px}
+.findpwd .x_div1{float:left;width:100%;margin-top:30px}
+.findpwd .x_div2{float:left;width:757px;height:32px;background:url(findpwd1.gif) no-repeat}
+.findpwd .x_div2_1{float:left;width:757px;height:32px;background:url(findpwd2.gif) no-repeat}
+.findpwd .x_div2_2{float:left;width:757px;height:32px;background:url(findpwd3.gif) no-repeat}
+.findpwd .x_div1 li{float:left;width:252px;text-align:center;padding-top:8px;font-size:14px;color:#888888}
+.findpwd .x_div1 .x_sel1{color:#ffffff}
+.findpwd .x_div3{float:left;width:100%;margin-top:20px}
+.findpwd .x_div3 li{float:left;margin:8px 0px 5px 0px;text-align:left;width:100%}
+.findpwd .x_div3 .x_1{float:left;width:100px;text-align:right;padding-top:8px}
+.findpwd .x_div3 .x_2{float:left;}
+.findpwd .txt1{width:200px;height:25px;border:1px #000 solid}
+.findpwd .txt2{width:60px;height:25px;border:1px #000 solid}
+.findpwd .txt3{border:1px #000 solid}
+
+#labelright{position:fixed;width:50px;top:0px}
+#labelright li{float:left;width:50px;background:url(menu_bg1.png);text-align:center;}
+#labelright .up{}
+#labelright .up a{padding:10px 0px 15px 0px;float:left;width:50px}
+#labelright .up a:hover{background-color:#333333;text-decoration:none;}
+#labelright .group{margin-top:5px;}
+#labelright .group a{color:#fff;padding:5px 0px;float:left;width:50px}
+#labelright .group a:hover{background-color:#333333;text-decoration:none;}
+
+#menugroup{position:fixed;200px}
+#menugroup div{float:left;width:190px;padding:5px;background:url(menu_bg1.png);overflow:hidden}
+#menugroup div li{float:left;width:180px;padding:3px 5px;background:#fff}
+#menugroup div .tit{font-size:14px;font-weight:bold}
+#menugroup div a{color:#555;float:left;padding:0px 10px 5px 0px;white-space:nowrap;}
+#menugroup div a:hover{color:#ff0000}
+
+.shop_tips{width:433px;height:303px;background:url(tips_bg.png) no-repeat;position:fixed;top:70px;left:50px;z-index:5}
+.shop_tips ul{float:left;margin:100px 0px 0px 10px;background:url(tips_tags.png) no-repeat 30px top;padding-left:140px}
+.shop_tips li{float:left;width:270px;text-align:left}
+.shop_tips h1{color:#ff0000}
+
+.menutable{float:left;width:100%}
+.menutable td{}
+.menutable .xtitle{float:left;width:100%;border-bottom:1px #ccc dotted;font-size:18px;font-weight:bold;padding:5px 0px 5px 0px;text-align:center}
+.menutable .xcont{float:left;width:100%;line-height:22px;margin:10px 0px 10px 0px;font-size:14px;color:#333}
+.menudiv1{float:left;width:735px}
+.menudiv1 li{float:left;width:350px;margin:10px 0px 0px 10px;color:#333}
+.menudiv1 .ximg{width:320px;height:250px;margin:5px;padding:0px;border:1px #ccc solid;line-height:250px;text-align:center;overflow:hidden}
+.menudiv1 .ximg img{width:320px;height:250px}
+.menudiv1 .xpicli{float:left;clear:left;width:350px;padding:0px;margin:5px 0px 0px 0px}
+.menudiv1 .xpicli .xleft{float:left;height:54px;width:17px;background:url(btn_1.gif) no-repeat 0px 0px;margin-top:7px}
+.menudiv1 .xpicli .xleft1{float:left;height:54px;width:17px;background:url(btn_1.gif) no-repeat -68px 0px;margin-top:7px}
+.menudiv1 .xpicli .xright{float:left;height:54px;width:17px;background:url(btn_1.gif) no-repeat -17px 0px;margin-top:7px}
+.menudiv1 .xpicli .xright1{float:left;height:54px;width:17px;background:url(btn_1.gif) no-repeat -85px 0px;margin-top:7px}
+.menudiv1 .xpicli .xmid{float:left;width:316px;padding-top:1px;overflow:hidden}
+.menudiv1 .xpicli .xmid span{float:left;width:1000px}
+.menudiv1 .xpicli .xmid a{float:left;width:57px;margin:0px 3px;padding-top:7px}
+.menudiv1 .xpicli .xmid .xsel{background:url(arrow4.png) no-repeat center top}
+.menudiv1 .xpicli .xmid .xsel img{border:2px #000 solid}
+.menudiv1 .xpicli .xmid img{width:53px;height:50px;border:2px #ccc solid}
+.menudiv1 .xtit{font-weight:bold}
+.menudiv1 .xprice{margin:10px 0px 5px 10px;width:350px}
+.menudiv1 .xbtn{margin:10px 0px 5px 10px;width:355px}
+.menudiv1 .xbtn input{float:left}
+.menudiv1 .xbtn .xnum{background:#0AA2DD;float:left;color:#fff;border-radius:5px;padding:0px 5px;margin:8px 0px 0px 10px}
+.menudiv1 .xshare{margin-top:20px;border-top:1px #ccc dotted;padding-top:20px}
+.menutit1{float:left;width:720px;margin:10px 0px 0px 5px;border-top:1px #fff solid;background:url(menubg.png) repeat-x;height:35px}
+.menutit1 li{float:left;margin-top:4px;height:25px;padding:5px 10px 0px 10px;font-size:14px}
+.menutit1 .xsel{background:#fff;border:1px #CACCCC solid;border-bottom:0px;}
+.menucont1{float:left;width:700px;margin-top:10px 0px 0px 5px;line-height:18px;padding:10px}
+.menucont1 img{max-width:700px;_zoom:expression(function(x){if(x.width>700){x.width=700;}}(this))}
+.menucomment{float:left;width:700px;padding:10px 20px}
+.menucomment .good{color:#CC0000;background:url(comment1.png) no-repeat 0px center;padding-left:20px}
+.menucomment .general{color:#78D417;background:url(comment2.png) no-repeat 0px center;padding-left:20px}
+.menucomment .fail{color:#666666;background:url(comment3.png) no-repeat 0px center;padding-left:20px}
+.menucomment .xtit{float:left;700px}
+.menucomment .xtit span{float:left;margin-right:20px}
+.menucomment table{float:left;width:650px;margin-top:20px}
+.menucomment table .tit2{}
+.menucomment table td{padding:8px 0px 7px 5px;border-bottom:1px #eee solid}
+.menucomment table .tit2 td{background:#efefef;font-weight:bold;border-bottom:0px}

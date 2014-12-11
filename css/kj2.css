@@ -1,0 +1,20 @@
+.kj1{width:100%;height:33px;background:url(04.gif) repeat-x;overflow:hidden;color:#ff0000}
+.kj1 .x1{float:left;padding-top:5px;font-weight:bold;font-size:16px}
+.kj1 .x1 a{color:#ff9900}
+.kj1 .x1 a:hover{color:#ff0000}
+.kj1 .x2{float:right;padding-top:3px}
+.kj1 .x2 span{float:left;}
+.kj1 .x2 .y1{padding-top:3px;margin-left:5px}
+.kj1 .x3{float:left;margin-left:10px;padding-top:5px;color:#0000ff;font-size:14px;height:25px}
+.xiala{top:93px}
+.xiala111{position:absolute;top:23px;width:100px;z-index:10;background:#fff;border:1px #888 solid;z-index:102}
+.xiala111 li{float:left;width:100px;padding:5px 0px 3px 0px;text-align:center}
+.kj2{width:100%;position:absolute;background:url(./images/transparent.png);padding-bottom:5px;top:33px;z-index:101}
+.kj2 ul{float:left;width:100%;background:#fff}
+.kj2 ul li{float:left;margin:5px 10px;text-align:center;height:210px;overflow:hidden;color:#888}
+.kj2 ul a{float:left;border:1px #ccc solid;padding:1px;}
+.kj2 ul span{float:left;width:100%;text-align:center}
+.kj2 ul img{width:160px;height:186px;}
+.kj2 ul .xsel{}
+.kj2 ul .xsel a{border:1px #ff8800 solid}
+.kj2 ul .xsel span{color:#ff0000}
