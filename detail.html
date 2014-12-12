@@ -36,7 +36,7 @@
 </div>
 <div class="subHeader">
     <div class="list_tab">
-        <a href="javascript:void(0)" class="tab2"  id="popupDialog-type">做法</a>
+        <a href="javascript:void(0)" class="tab2 current-tab"  id="popupDialog-type">做法</a>
         <a href="javascript:void(0)" class="tab3"  id="popupDialog-detail" data-diancan="1">评论（1200）</a>
     </div>
 </div>
@@ -179,10 +179,14 @@
         $("#popupDialog-detail").on("click",function(){
                 $("#page2").show();
                 $("#page1").hide();
+            $(this).addClass("current-tab");
+            $("#popupDialog-type").removeClass("current-tab")  ;
         })
         $("#popupDialog-type").on("click",function(){
             $("#page1").show();
             $("#page2").hide();
+            $(this).addClass("current-tab");
+            $("#popupDialog-detail").removeClass("current-tab")  ;
         })
     })
 </script>
