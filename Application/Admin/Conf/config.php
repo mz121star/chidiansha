@@ -9,7 +9,10 @@ $private_config = array(
                         'URL_ROUTER_ON' => true,
                         'URL_CASE_INSENSITIVE' =>true,
                         'URL_ROUTE_RULES' => array(
-                                                  'moduser/:userid' => 'User/moduser',
+                                                  'modfood/:foodid' => 'Food/modfood',
+                                                  'delfood/:foodid' => 'Food/delfood',
+                                                  'modvote/:voteid' => 'Vote/modvote',
+                                                  'delvote/:voteid' => 'Vote/delvote',
                                                   )
                         );
 

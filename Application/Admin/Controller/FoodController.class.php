@@ -1,113 +1,84 @@
 <?php
+namespace Admin\Controller;
 
-class FoodAction extends PublicAction {
+class FoodController extends BaseController {
 
-    public function lists(){
+    public function listAction(){
         $food = M("Food");
-        import('ORG.Util.Page');
         $userid = $this->userInfo['user_id'];
-        $usertype = $this->userInfo['user_type'];
-        if ($usertype == 1) {
-            $count = $food->count();
-            $page = new Page($count, 10);
-            $foodlist = $food->field('id,food_name,food_price')->order(array('id'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
-        } else {
-            $count = $food->where('user_id="'.$userid.'"')->count();
-            $page = new Page($count, 10);
-            $foodlist = $food->where('user_id="'.$userid.'"')->field('id,food_name,food_price')->order(array('id'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
-        }
+        $count = $food->count();
+        $page = new \Think\Page($count, 10);
+        $foodlist = $food->field('food_id,food_name,food_adddate')->order(array('food_id'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
         $show = $page->show();
         $this->assign('page',$show);
         $this->assign('foodlist', $foodlist);
         $this->display();
     }
 
-    public function showadd(){
-        $usertype = $this->userInfo['user_type'];
-        if ($usertype == 1) {
-            $this->redirect('Food/lists');
-        }
-        $userid = $this->userInfo['user_id'];
-        $shop = M("Shop");
-        $type = $shop->field('shop_type')->where('user_id="'.$userid.'"')->find();
-        $shoptype = M("Shoptype");
-        $typelist = $shoptype->where('parent_id = '.$type['shop_type'])->order(array('id'=>'desc'))->select();
-        $this->assign('typelist', $typelist);
+    public function addAction(){
         $this->display();
     }
     
-    public function modfood() {
-        $foodid = $this->_get('foodid');
-        $userid = $this->userInfo['user_id'];
+    public function modfoodAction() {
+        $foodid = I('get.foodid');
         $food = M("Food");
-        $foodinfo = $food->where('id='.$foodid.' and user_id="'.$userid.'"')->find();
+        $foodinfo = $food->where('food_id="'.$foodid.'"')->find();
         if (!$foodinfo) {
-            $this->redirect('Food/lists');
+            $this->error("菜肴不存在");
         }
         $this->assign('foodinfo', $foodinfo);
-
-        $shop = M("Shop");
-        $type = $shop->field('shop_type')->where('user_id="'.$userid.'"')->find();
-        $shoptype = M("Shoptype");
-        $typelist = $shoptype->where('parent_id = '.$type['shop_type'])->order(array('id'=>'desc'))->select();
-        $this->assign('typelist', $typelist);
         $this->display();
     }
     
-    public function delfood(){
-        $foodid = $this->_get('foodid');
-        $userid = $this->userInfo['user_id'];
-        $usertype = $this->userInfo['user_type'];
+    public function delfoodAction(){
+        $foodid = I('get.foodid');
         $food = M("Food");
-        if ($usertype == 1) {
-            $foodnumber = $food->where('id='.$foodid)->delete();
-            $this->redirect('Food/lists');
-        }
-        $foodinfo = $food->where('id='.$foodid.' and user_id="'.$userid.'"')->find();
+        $foodinfo = $food->where('food_id="'.$foodid.'"')->find();
         if ($foodinfo) {
-            $foodnumber = $food->where('id='.$foodid.' and user_id="'.$userid.'"')->delete();
+            $foodnumber = $food->where('food_id="'.$foodid.'"')->delete();
             if ($foodnumber) {
                 unlink('./upload/'.$foodinfo['food_image']);
-                $this->redirect('Food/lists');
+                $fav = M("fav");
+                $fav->where('favfood_id="'.$foodid.'"')->delete();
+                $this->success('删除菜肴成功');
             } else {
-                $this->error("删除菜品失败", 'lists');
+                $this->error("删除菜肴失败");
             }
         } else {
-            $this->error("删除菜品失败", 'lists');
+            $this->error("删除菜肴失败");
         }
     }
 
-    public function save(){
-        $userid = $this->userInfo['user_id'];
-        $isdelimage = $this->_post('delfood_image');
+    public function saveAction(){
+        $isdelimage = I('post.delfood_image');
         if ($isdelimage) {
             $_POST['food_image'] = '';
             unlink('./upload/'.$isdelimage);
         }
         if ($_FILES['food_image']['name']) {
-            import('ORG.Net.UploadFile');
-            $upload = new UploadFile();
+            $upload = new \Think\Upload();
             $upload->maxSize = 3145728;//3M
-            $upload->allowExts = array('jpg', 'gif', 'png', 'jpeg');
-            $upload->savePath = './upload/';
-            if(!$upload->upload()) {
-                $this->error($upload->getErrorMsg());
-            }else{
-                $info = $upload->getUploadFileInfo();
+            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');
+            $upload->rootPath = './upload/';
+            $uploadinfo = $upload->uploadOne($_FILES['food_image']);
+            if(!$uploadinfo) {
+                $this->error($upload->getError());
             }
-            $_POST['food_image'] = $info[0]['savename'];
+            $_POST['food_image'] = $uploadinfo['savepath'].$uploadinfo['savename'];
         }
         $food = M("Food");
-        $post = $this->filterAllParam('post');
-        if (!isset($post['food_top'])) {
-            $post['food_top'] = "0";
-        }
-        $post['user_id'] = $userid;
-        if (isset($post['id']) && $post['id']) {
-            $foodnumber = $food->where('id='.$post['id'].' and user_id="'.$userid.'"')->save($post);
+        $post = filterAllParam('post');
+        if (isset($post['food_id']) && $post['food_id']) {
+            unset($post['delfood_image']);
+            $foodid = $food->where('food_id="'.$post['food_id'].'"')->save($post);
         } else {
+            $post['food_adddate'] = date('Y-m-d H:i:s');
             $foodid = $food->add($post);
         }
-        $this->redirect('Food/lists');
+        if ($foodid) {
+            $this->success('保存菜肴成功', 'list');
+        } else {
+            $this->error("保存菜肴失败");
+        }
     }
 }

@@ -1,8 +1,8 @@
 <h2 class="sub-header">修改菜肴</h2>
 <div class="row placeholders">
     <div class="col-md-7">
-        <form class="form-horizontal" role="form" method="post" action="__GROUP__/Food/save" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="{$foodinfo.id}">
+        <form id="addform" class="form-horizontal" role="form" method="post" action="__MODULE__/Food/save" enctype="multipart/form-data">
+        <input type="hidden" name="food_id" value="{$foodinfo.food_id}">
             <div class="form-group">
               <label for="userid" class="col-sm-2 control-label">菜名</label>
               <div class="col-sm-10">
@@ -10,14 +10,44 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="password" class="col-sm-2 control-label">价格</label>
+              <label for="password" class="col-sm-2 control-label">食材</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="food_price" name="food_price" value="{$foodinfo.food_price}" required>
+                <input type="text" class="form-control" id="food_shicai" name="food_shicai" value="{$foodinfo.food_shicai}" placeholder="秋葵350g，鲜虾200g">
               </div>
             </div>
             <div class="form-group">
-              <label for="status" class="col-sm-2 control-label">图片</label>
-              <div class="col-sm-4">
+              <label for="status" class="col-sm-2 control-label">辅材</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="food_fucai" name="food_fucai" value="{$foodinfo.food_fucai}" placeholder="秋葵350g，鲜虾200g">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="type1" class="col-sm-2 control-label">准备工作</label>
+              <div class="col-sm-10">
+                  <input type="text" class="form-control" id="food_zhunbei" name="food_zhunbei" value="{$foodinfo.food_zhunbei}" placeholder="秋葵350g，鲜虾200g">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description" class="col-sm-2 control-label">制作步骤</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="food_buzhou" name="food_buzhou" value="{$foodinfo.food_buzhou}" placeholder="秋葵350g，鲜虾200g">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address" class="col-sm-2 control-label">其他</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="food_qita" name="food_qita" value="{$foodinfo.food_qita}" placeholder="秋葵350g，鲜虾200g">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address" class="col-sm-2 control-label">期数</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="food_qishu" name="food_qishu" value="{$foodinfo.food_qishu}" placeholder="秋葵350g，鲜虾200g">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address" class="col-sm-2 control-label">食物图片</label>
+              <div class="col-sm-10">
                 <input type="file" id="food_image" name="food_image">
                 <if condition="$foodinfo.food_image neq ''">
                       <img src="/upload/{$foodinfo.food_image}" width="100" height="50">
@@ -26,33 +56,23 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="type1" class="col-sm-2 control-label">介绍</label>
-              <div class="col-sm-5">
-                  <textarea id="food_description" name="food_description" class="form-control" rows="5">{$foodinfo.food_description}</textarea>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="description" class="col-sm-2 control-label">类型</label>
-              <div class="col-sm-10">
-                <select name="food_type" class="form-control">
-                    <option value="0">请选择类型</option>
-                    <foreach name="typelist" item="type">
-                    <option value="{$type.id}" <if condition="$foodinfo['food_type'] eq $type['id']">selected</if>>{$type.type_name}</option>
-                    </foreach>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="address" class="col-sm-2 control-label">置顶</label>
-              <div class="col-sm-1">
-                <input type="checkbox" class="form-control" id="food_top" name="food_top" value="1" <if condition="$foodinfo.food_top eq '1'">checked</if>>
-              </div>
-            </div>
-            <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">修改</button>
+                <button type="button" class="btn btn-default" id="addbtn">修改</button>
               </div>
             </div>
           </form>
   </div>
 </div>
+<script type="text/javascript">
+$(function () {
+    $("#addbtn").click(function () {
+        var food_name = $("#food_name").val();
+        if (!food_name) {
+            alert("请填写菜名");
+            return false;
+        }
+        $("#addform").submit();
+    });
+});
+</script>
+

@@ -42,6 +42,7 @@ CREATE TABLE `weishi_fav` (
 DROP TABLE IF EXISTS `weishi_toupiao`;
 CREATE TABLE `weishi_toupiao` (
   `tp_id` int(11) NOT NULL auto_increment,
+  `tp_name` varchar(100) NOT NULL,
   `tp_desc` text NOT NULL,
   `tp_adddate` datetime NOT NULL,
   `tp_image` varchar(500) NOT NULL,
@@ -64,5 +65,6 @@ CREATE TABLE `weishi_tpuser` (
   `tpuser_food_id` int(11) unsigned NOT NULL,
   `tpuser_user_id` varchar(50) NOT NULL,
   `tpuser_date` datetime NOT NULL,
+  `tpuser_tp_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`tpuser_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='投票用户表';
