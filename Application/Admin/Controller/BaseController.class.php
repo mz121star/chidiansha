@@ -2,7 +2,6 @@
 namespace Admin\Controller;
 
 use Think\Controller;
-use Think\Auth;
 
 class BaseController extends Controller {
 
@@ -15,12 +14,6 @@ class BaseController extends Controller {
             if(empty($this->userInfo)){
                 $this->display('Index:login');
                 exit;
-            }
-            $auth = new Auth();
-            if (!$auth->check('all', $this->userInfo['user_id'])) {
-                if (!$auth->check('Admin-'.CONTROLLER_NAME.'-'.ACTION_NAME, $this->userInfo['user_id'])) {
-                    $this->error('没有权限', U('Index/index'));
-                }
             }
         }
         $this->assign('current_m', MODULE_NAME);

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>后台管理</title>
+    <title>伟诗微信公众平台</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/dashboard.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -22,7 +22,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="__MODULE__/Index">后台管理</a>
+          <a class="navbar-brand" href="__MODULE__/Index">伟诗微信公众平台</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -37,13 +37,13 @@
         <div class="col-sm-3 col-md-2 sidebar">
           
           <ul class="nav nav-sidebar">
-             <li <if condition="$current_c eq 'Edu' and $current_a eq 'lists'">class="active"</if>><a href="__MODULE__/Edu/lists">教育机构列表</a></li>
-             <li <if condition="$current_c eq 'Edu' and $current_a eq 'showadd'">class="active"</if>><a href="__MODULE__/Edu/showadd">添加机构</a></li>
+             <li <if condition="$current_c eq 'Food' and $current_a eq 'list'">class="active"</if>><a href="__MODULE__/Food/list">菜肴管理</a></li>
+             <li <if condition="$current_c eq 'Food' and $current_a eq 'add'">class="active"</if>><a href="__MODULE__/Food/add">添加菜肴</a></li>
           </ul>
 
           <ul class="nav nav-sidebar">
-             <li <if condition="$current_c eq 'User' and $current_a eq 'lists'">class="active"</if>><a href="__MODULE__/User/lists">会员列表</a></li>
-             <li <if condition="$current_c eq 'User' and $current_a eq 'showadd'">class="active"</if>><a href="__MODULE__/User/showadd">添加会员</a></li>
+             <li <if condition="$current_c eq 'User' and $current_a eq 'list'">class="active"</if>><a href="__MODULE__/User/list">投票管理</a></li>
+             <li <if condition="$current_c eq 'User' and $current_a eq 'add'">class="active"</if>><a href="__MODULE__/User/add">添加新投票</a></li>
           </ul>
 
         </div>
