@@ -1,28 +1,111 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6">{$video1}</div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-3">{$image2}</div>
-                <div class="col-md-3"><h3>{$printer_name}</h3><br>{$word1}</div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">{$image3}</div>
-                <div class="col-md-3">{$qrcode1}</div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">{$image1}</div>
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-3">{$image4}</div>
-                <div class="col-md-3">{$code}</div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">{$image5}</div>
-                <div class="col-md-3">{$current_image}</div>
-            </div>
-        </div>
-    </div>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="author" content="www.frebsite.nl" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+    <title>今天吃点啥</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="/mobile/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/flexslider.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/jquery.mmenu.all.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/style.css" />
+
+    <script type="text/javascript" src="/mobile/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/mobile/js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="/mobile/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/mobile/js/o-script.js"></script>
+    <script type="text/javascript" src="/js/jquery.tipswindow-2.2.js"></script>
+    <link rel="stylesheet" href="/mobile/css/ali/iconfont.css">
+
+</head>
+<body class="o-page">
+<div id="page">
+<!-- Header -->
+<div id="header">
+    <a href="#menu"><i class="fa fa-bars"></i> </a>
+				<span id="Logo" class="svg">
+					今天吃点啥
+				</span>
+    <a class="backBtn" href="@">  </a>
 </div>
+<div class="subHeader">
+
+    <div class="list_tab"><!--<div class="list_tab fixed"> -->
+        <a href="javascript:void(0)" class="tab1 current-tab" id="popupDialog-type">综合最佳</a>
+        <a href="javascript:void(0)" class="tab2" id="popupDialog-time">收藏最多</a>
+        <a href="javascript:void(0)" class="tab3">最容易做</a>
+    </div>
+
+
+</div>
+<foreach name="foodlist" item="food">
+<div class="geo-rst-list">
+<a class="grst-block " href="__MODULE__/detail/{$food.food_id}">
+    <img class="grst-logo" width="42" height="42" alt="{$food.food_name}" src="/upload/{$food.food_image}">
+    <div class="grst-detail">
+        <div class="grst-name">
+            <span   class="ng-binding">{$food.food_qishu} {$food.food_name}</span>
+        </div>
+         <div class="grst-status "  >
+      <span class="bookable " >{$food.favcount|default=0}人收藏</span>
+  </div>
+        <div class="grst-misc">
+            <span >{$food.food_adddate}</span>
+        </div>
+    </div>
+</a>
+      </div>
+</foreach>
+
+
+<!-- Content -->
+
+
+<!-- Menu navigation -->
+<style>
+    .mm-search{display:none}
+</style>
+<script>
+    $(function () {
+        $("#logout").on("click",function(){
+            if (confirm('确定要退出登录吗？')) {
+                location.href = "__MODULE__/index/logout";
+            }
+
+        })
+    });
+
+</script>
+<nav id="menu">
+    <ul>
+        <!--<li class="msearch">
+            <form style="height: 50px;" method="post" action="/mobile.php/index/search">
+            <input type="text" style="width: 68%; float: left; border-radius: 0px;" placeholder="搜索餐厅" name="searchshop" value="">
+             <input style="width: 30%;background: #1AA2E2;border: 0px;color: #fff;height: 30px;float: left;" class="btn" type="submit"  value="search">
+            </form>
+     </li>-->
+
+
+        <li>
+            <a href="__MODULE__/index">
+                <i class="iconfont">&#xf012b</i>首页
+            </a>
+        </li>
+
+        <li>
+            <a href="__MODULE__/index/myfav">
+                <i class="iconfont">&#xf00d8</i>我的收藏
+            </a>
+        </li>
+
+    </ul>
+</nav>
+</div>
+
+
+</body>
+</html>

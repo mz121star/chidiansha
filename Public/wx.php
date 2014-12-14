@@ -5,6 +5,8 @@
 
 //define your token
 define("TOKEN", "weishi");
+define("APPID", "wx746191c3d2d0ebd7");
+define("APPSECRET", "a4****************************5a");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 
@@ -101,7 +103,20 @@ class wechatCallbackapiTest
 
     //接收关注/取消关注事件，回复文字消息
     private function receiveEvent($object)  {
-        $param = array('fromUserName'=>(string)$object->FromUserName, 'toUserName'=>(string)$object->ToUserName, 'eventType'=>(string)$object->Event);
+        if (!$_SESSION['access_token']) {
+            $appid = APPID;
+            $appsecret = APPSECRET;
+            $access_token_url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$appid.'&secret='.$appsecret;
+            $access_token_result = file_get_contents($access_token_url);
+            $access_token_result = json_decode($access_token_result);
+            $_SESSION['access_token'] = $access_token_result->access_token;
+        }
+        $fromUserName = (string)$object->FromUserName;
+        $weixin_user_info_url = 'https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$_SESSION['access_token'].'&openid='.$fromUserName.'&lang=zh_CN';
+        $weixin_user_info_result = file_get_contents($weixin_user_info_url);
+        $weixin_user_info_result = json_decode($weixin_user_info_result);
+
+        $param = array('fromUserName'=>$fromUserName, 'nickname'=>(string)$weixin_user_info_result->nickname, 'headimgurl'=>(string)$weixin_user_info_result->headimgurl, 'eventType'=>(string)$object->Event);
         $url = $_SERVER['SERVER_NAME'].'/index.php/weixin/event';
 
         $ch = curl_init();

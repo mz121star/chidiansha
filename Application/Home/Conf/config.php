@@ -9,9 +9,8 @@ $private_config = array(
                         'URL_ROUTER_ON' => true,
                         'URL_CASE_INSENSITIVE' =>true,
                         'URL_ROUTE_RULES' => array(
-                                                  'api/:token' => 'Weixin/index',
-                                                  'zoom/:uid' => 'Weixin/zoom',
-                                                  'printer/:atcode' => 'Index/index',
+                                                  'weixin/event' => 'Index/event',
+                                                  'detail/:foodid' => 'Index/detail',
                                                   )
                         );
 
