@@ -4,9 +4,14 @@ namespace Home\Controller;
 class IndexController extends BaseController {
 
     public function indexAction(){
+        $order = I('get.order');
+        $orderby = 'food_adddate desc';
+        if ($order == 'favmost') {
+            $orderby = 'food_favcount desc';
+        }
         $food = M('food');
         $fav = M('fav');
-        $foodresult = $food->field('food_id,food_name,food_adddate,food_qishu,food_image')->order('food_adddate desc')->select();
+        $foodresult = $food->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
         $foodlist = array();
         foreach ($foodresult as $value) {
             $favcount = $fav->where('favfood_id = "'.$value['food_id'].'"')->count();
@@ -14,6 +19,7 @@ class IndexController extends BaseController {
             $foodlist[] = $value;
         }
         $this->assign('foodlist', $foodlist);
+        $this->assign('order', $order);
         $this->display();
     }
 
@@ -30,6 +36,40 @@ class IndexController extends BaseController {
         $commentlist = $comment->where('commentfood_id = "'.$foodid.'"')->select();
         $this->assign('commentlist', $commentlist);
         $this->assign('commentcount', $commentcount);
+        $this->display();
+    }
+
+    public function favfoodAction() {
+        $foodid = I('get.foodid');
+        $food = M('food');
+        $foodinfo = $food->where('food_id = "'.$foodid.'"')->find();
+        if (!$foodinfo) {
+            echo '菜肴不存在';exit;
+        }
+        $favobj = M('fav');
+        $data['favfood_id'] = $foodid;
+        $data['favuser_id'] = $this->userInfo['user_id'];
+        $data['fav_date'] = date('Y-m-d H:i:s');
+        $favid = $favobj->add($data);
+        if ($favid) {
+            $food->where('food_id = "'.$foodid.'"')->setInc('food_favcount');;
+            echo '收藏成功';exit;
+        } else {
+            echo '收藏失败';exit;
+        }
+    }
+
+    public function myfavAction() {
+        $favobj = M('fav');
+        $food = M('food');
+        $data['favuser_id'] = $this->userInfo['user_id'];
+        $resultlist = $favobj->where($data)->select();
+        $favlist = array();
+        foreach ($resultlist as $value) {
+            $foodinfo = $food->where('food_id = "'.$value['favfood_id'].'"')->find();
+            $favlist[] = $foodinfo;
+        }
+        $this->assign('favlist', $favlist);
         $this->display();
     }
 

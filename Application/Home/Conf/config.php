@@ -11,6 +11,7 @@ $private_config = array(
                         'URL_ROUTE_RULES' => array(
                                                   'weixin/event' => 'Index/event',
                                                   'detail/:foodid' => 'Index/detail',
+                                                  'fav/:foodid' => 'Index/favfood'
                                                   )
                         );
 

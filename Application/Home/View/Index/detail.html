@@ -118,37 +118,10 @@
     });
 
 </script>
-<nav id="menu">
-    <ul>
-
-
-        <li>
-            <a href="/mobile.php/index">
-                <i class="iconfont">&#xf012b</i>首页
-            </a>
-        </li>
-
-        <li>
-            <a href="/mobile.php/index/joinmarket">
-                <i class="iconfont">&#xf00d8</i>我的收藏
-            </a>
-        </li>
-    </ul>
-</nav>
+<include file="Index:leftbar"/>
 </div>
 
-
-
-
-
-
-
-
 </div>
-
-
-
-
 
 <script>
     $(function(){
@@ -157,7 +130,7 @@
 
         $("#favshop").on("click",function(){
             var _self=this;
-            $.get("/mobile.php/fav/hstx").success(function(d){
+            $.get("__MODULE__/fav/{$foodinfo.food_id}").success(function(d){
                 alert(d);
             })
         });
