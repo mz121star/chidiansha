@@ -6,7 +6,7 @@
 //define your token
 define("TOKEN", "weishi");
 define("APPID", "wx746191c3d2d0ebd7");
-define("APPSECRET", "a4****************************5a");
+define("APPSECRET", "a4e835f6b20748fba46a827017cc835a");
 $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 
