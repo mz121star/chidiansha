@@ -51,6 +51,13 @@ class IndexController extends BaseController {
             $voteinfo = $votelist[0];
             $votefood = $tpfood->where('tpfood_tpid ="'.$voteinfo['tp_id'].'"')->select();
         }
+        $tpuser = M("tpuser");
+        $user = $this->userInfo['user_id'];
+        $isvote = $tpuser->where('tpuser_tp_id = "'.$voteinfo['tp_id'].'" and tpuser_user_id = "'.$user.'"')->count();
+        if ($isvote) {
+            $this->error("已经投过票了");
+        }
+        $user = $this->userInfo['user_id'];
         $this->assign('voteinfo', $voteinfo);
         $this->assign('votefood', $votefood);
         $this->display();
@@ -60,6 +67,12 @@ class IndexController extends BaseController {
         $post = I('post.');
         if (!count($post['tpuser_food_id'])) {
             $this->error("请选择投票选项");
+        }
+        $user = $this->userInfo['user_id'];
+        $tpuser = M("tpuser");
+        foreach ($post['tpuser_food_id'] as $value) {
+            $insert = array('tpuser_food_id'=>$value, 'tpuser_user_id'=>$user, 'tpuser_tp_id'=>$post['tpuser_tp_id'], 'tpuser_date'=>date('Y-m-d H:i:s'));
+            $tpuser->add($insert);
         }
         $this->display('tpjg');
     }
