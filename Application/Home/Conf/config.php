@@ -9,9 +9,11 @@ $private_config = array(
                         'URL_ROUTER_ON' => true,
                         'URL_CASE_INSENSITIVE' =>true,
                         'URL_ROUTE_RULES' => array(
-                                                  'weixin/event' => 'Index/event',
+                                                  'wx/event' => 'Index/event',
+                                                  'wx/getjxhd' => 'Index/getjxhd',
                                                   'detail/:foodid' => 'Index/detail',
-                                                  'fav/:foodid' => 'Index/favfood'
+                                                  'fav/:foodid' => 'Index/favfood',
+                                                  'weixin/:uid/:ac' => 'Index/send'
                                                   )
                         );
 

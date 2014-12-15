@@ -85,3 +85,15 @@ CREATE TABLE `weishi_tpuser` (
   `tpuser_tp_id` int(11) unsigned NOT NULL,
   PRIMARY KEY (`tpuser_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='投票用户表';
+
+
+DROP TABLE IF EXISTS `weishi_jxhd`;
+CREATE TABLE `weishi_jxhd` (
+  `jxhd_id` int(11) NOT NULL auto_increment,
+  `jxhd_desc` varchar(500) NOT NULL,
+  `jxhd_content` text NOT NULL,
+  `jxhd_image` varchar(100) NOT NULL,
+  `jxhd_title` varchar(100) NOT NULL,
+  `jxhd_date` datetime NOT NULL,
+  PRIMARY KEY (`jxhd_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='精选活动表';

@@ -3,6 +3,13 @@ namespace Home\Controller;
 
 class IndexController extends BaseController {
 
+    public function sendAction() {
+        $userID = I('get.uid');
+        $actionto = I('get.ac');
+        session('userinfo', array('user_id' => $userID));
+        $this->redirect('index/'.$actionto);
+    }
+
     public function indexAction(){
         $order = I('get.order');
         $orderby = 'food_adddate desc';
@@ -24,6 +31,23 @@ class IndexController extends BaseController {
         $this->assign('order', $order);
         $this->display();
     }
+
+    public function getjxhdAction() {
+        $jxhd = M("jxhd");
+        $count = $jxhd->count();
+        $page = new \Think\Page($count, 1);
+        $jxhdlist = $jxhd->order(array('jxhd_date'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
+        $jxhdinfo = array();
+        if (isset($jxhdlist[0])) {
+            $jxhdinfo = $jxhdlist[0];
+        }
+        echo json_encode($jxhdinfo);
+        exit;
+    }
+
+    public function jxhdAction() {
+        $this->redirect('index/index');
+    }
     
     public function jxspAction() {
         $food = M('food');
@@ -38,7 +62,7 @@ class IndexController extends BaseController {
         $this->assign('foodlist', $foodlist);
         $this->display();
     }
-    
+
     public function zjcsAction() {
         $toupiao = M("toupiao");
         $count = $toupiao->count();
@@ -74,6 +98,18 @@ class IndexController extends BaseController {
             $insert = array('tpuser_food_id'=>$value, 'tpuser_user_id'=>$user, 'tpuser_tp_id'=>$post['tpuser_tp_id'], 'tpuser_date'=>date('Y-m-d H:i:s'));
             $tpuser->add($insert);
         }
+        
+        $tpfood = M("tpfood");
+        $foodresult = $tpfood->where('tpfood_tpid = "'.$post['tpuser_tp_id'].'"')->select();
+        $foodtotalvote = $tpuser->where('tpuser_tp_id = "'.$post['tpuser_tp_id'].'"')->count();
+        $foodlist = array();
+        foreach ($foodresult as $value) {
+            $foodvote = $tpuser->where('tpuser_food_id = "'.$value['tpfood_id'].'"')->count();
+            $value['foodvote'] = $foodvote;
+            $value['foodvoteperset'] = intval($foodvote/$foodtotalvote*100);
+            $foodlist[] = $value;
+        }
+        $this->assign('foodlist', $foodlist);
         $this->display('tpjg');
     }
 

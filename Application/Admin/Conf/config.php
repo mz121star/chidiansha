@@ -13,6 +13,8 @@ $private_config = array(
                                                   'delfood/:foodid' => 'Food/delfood',
                                                   'modvote/:voteid' => 'Vote/modvote',
                                                   'delvote/:voteid' => 'Vote/delvote',
+                                                  'deljxhd/:hdid' => 'Index/deljxhd',
+                                                  'modjxhd/:hdid' => 'Index/modjxhd',
                                                   )
                         );
 
