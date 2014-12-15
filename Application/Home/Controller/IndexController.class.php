@@ -8,6 +8,8 @@ class IndexController extends BaseController {
         $orderby = 'food_adddate desc';
         if ($order == 'favmost') {
             $orderby = 'food_favcount desc';
+        } elseif ($order == 'dif') {
+            $orderby = 'food_difficulty desc';
         }
         $food = M('food');
         $fav = M('fav');
@@ -21,6 +23,45 @@ class IndexController extends BaseController {
         $this->assign('foodlist', $foodlist);
         $this->assign('order', $order);
         $this->display();
+    }
+    
+    public function jxspAction() {
+        $food = M('food');
+        $comment = M('comment');
+        $foodresult = $food->where('food_type = "1"')->order('food_adddate desc')->select();
+        $foodlist = array();
+        foreach ($foodresult as $value) {
+            $commentcount = $comment->where('commentfood_id = "'.$value['food_id'].'"')->count();
+            $value['comcount'] = $commentcount;
+            $foodlist[] = $value;
+        }
+        $this->assign('foodlist', $foodlist);
+        $this->display();
+    }
+    
+    public function zjcsAction() {
+        $toupiao = M("toupiao");
+        $count = $toupiao->count();
+        $page = new \Think\Page($count, 1);
+        $votelist = $toupiao->order(array('tp_adddate'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
+        $voteinfo = array();
+        $votefood = array();
+        if (isset($votelist[0])) {
+            $tpfood = M("tpfood");
+            $voteinfo = $votelist[0];
+            $votefood = $tpfood->where('tpfood_tpid ="'.$voteinfo['tp_id'].'"')->select();
+        }
+        $this->assign('voteinfo', $voteinfo);
+        $this->assign('votefood', $votefood);
+        $this->display();
+    }
+    
+    public function savetpAction() {
+        $post = I('post.');
+        if (!count($post['tpuser_food_id'])) {
+            $this->error("请选择投票选项");
+        }
+        $this->display('tpjg');
     }
 
     public function detailAction() {

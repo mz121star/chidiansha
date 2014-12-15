@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="author" content="www.frebsite.nl" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+    <title>今天吃点啥</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="/mobile/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/flexslider.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/jquery.mmenu.all.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/style.css" />
+
+    <script type="text/javascript" src="/mobile/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/mobile/js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="/mobile/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/mobile/js/o-script.js"></script>
+    <script type="text/javascript" src="/js/jquery.tipswindow-2.2.js"></script>
+    <link rel="stylesheet" href="/mobile/css/ali/iconfont.css">
+
+</head>
+<body class="o-page">
+<div id="page">
+    <!-- Header -->
+    <div id="header">
+        <a href="#menu"><i class="fa fa-bars"></i> </a>
+				<span id="Logo" class="svg">
+					最近吃啥				</span>
+        <a class="backBtn" href="/mobile.php"><i class="fa fa-home"></i></a>
+    </div>
+
+
+    <div id="page1" >
+        <div class="bannerPane">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+
+                        <li>
+                            <img src="/upload/540494333e7b7.jpg" />
+                        </li>
+                        <li>
+                            <img src="/upload/54049301653a5.jpg" />
+                        </li>
+                        <li>
+                            <img src="/upload/5404929dbe417.jpg" />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="detail">
+<form method="post" action="__MODULE__/index/savetp">
+    <input name="tpuser_tp_id" value="{$voteinfo.tp_id}" type="hidden">
+            <div class="art"> {$voteinfo.tp_desc}</div>
+            <hr>
+            <ul>
+                <foreach name="votefood" item="food">
+                    <li><label><input type="checkbox" name="tpuser_food_id[]" value="{$food.tpfood_id}" />  {$food.tpfood_name}</label></li>
+                </foreach>
+            </ul>
+            <div class="art"  style="text-align: center"><input type="submit"  class=" ui-btn" value="提交" ></div>
+            <hr>
+</form>
+        </div>
+        <!-- Content -->
+    </div>
+
+
+
+    <!-- Menu navigation -->
+    <style>
+        .mm-search{display:none}
+    </style>
+    <script>
+        $(function () {
+            $("#logout").on("click",function(){
+                if (confirm('确定要退出登录吗？')) {
+                    location.href = "/mobile.php/index/logout";
+                }
+
+            })
+        });
+
+    </script>
+    <nav id="menu">
+        <ul>
+
+
+            <li>
+                <a href="/mobile.php/index">
+                    <i class="iconfont">&#xf012b</i>首页
+                </a>
+            </li>
+
+            <li>
+                <a href="/mobile.php/index/joinmarket">
+                    <i class="iconfont">&#xf00d8</i>我的收藏
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

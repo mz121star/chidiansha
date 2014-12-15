@@ -8,7 +8,7 @@ class FoodController extends BaseController {
         $userid = $this->userInfo['user_id'];
         $count = $food->count();
         $page = new \Think\Page($count, 10);
-        $foodlist = $food->field('food_id,food_name,food_adddate')->order(array('food_id'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
+        $foodlist = $food->field('food_id,food_name,food_adddate,food_type')->order(array('food_id'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
         $show = $page->show();
         $this->assign('page',$show);
         $this->assign('foodlist', $foodlist);
