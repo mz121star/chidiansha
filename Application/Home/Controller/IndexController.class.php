@@ -20,7 +20,7 @@ class IndexController extends BaseController {
         }
         $food = M('food');
         $fav = M('fav');
-        $foodresult = $food->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
+        $foodresult = $food->where('food_type = "0"')->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
         $foodlist = array();
         foreach ($foodresult as $value) {
             $favcount = $fav->where('favfood_id = "'.$value['food_id'].'"')->count();
