@@ -15,6 +15,7 @@ $private_config = array(
                                                   'delvote/:voteid' => 'Vote/delvote',
                                                   'deljxhd/:hdid' => 'Index/deljxhd',
                                                   'modjxhd/:hdid' => 'Index/modjxhd',
+                                                  'viewvote/:voteid' => 'Vote/view',
                                                   )
                         );
 

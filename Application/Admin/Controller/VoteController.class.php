@@ -13,6 +13,30 @@ class VoteController extends BaseController {
         $this->assign('votelist', $votelist);
         $this->display();
     }
+    
+    public function viewAction() {
+        $voteid = I('get.voteid');
+        $toupiao = M("toupiao");
+        $toupiaoinfo = $toupiao->where('tp_id = "'.$voteid.'"')->find();
+        if (!$toupiaoinfo) {
+            $this->error("投票不存在");
+        }
+        $this->assign('toupiaoinfo', $toupiaoinfo);
+        
+        $tpuser = M("tpuser");
+        $tpfood = M("tpfood");
+        $foodresult = $tpfood->where('tpfood_tpid = "'.$voteid.'"')->select();
+        $foodtotalvote = $tpuser->where('tpuser_tp_id = "'.$voteid.'"')->count();
+        $foodlist = array();
+        foreach ($foodresult as $value) {
+            $foodvote = $tpuser->where('tpuser_food_id = "'.$value['tpfood_id'].'"')->count();
+            $value['foodvote'] = $foodvote;
+            $value['foodvoteperset'] = intval($foodvote/$foodtotalvote*100);
+            $foodlist[] = $value;
+        }
+        $this->assign('foodlist', $foodlist);
+        $this->display();
+    }
 
     public function addAction(){
         $this->display();
