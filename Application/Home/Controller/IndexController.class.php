@@ -85,8 +85,8 @@ class IndexController extends BaseController {
         $votelist = $toupiao->order(array('tp_adddate'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
         $voteinfo = array();
         $votefood = array();
+        $tpfood = M("tpfood");
         if (isset($votelist[0])) {
-            $tpfood = M("tpfood");
             $voteinfo = $votelist[0];
             $votefood = $tpfood->where('tpfood_tpid ="'.$voteinfo['tp_id'].'"')->select();
         }
@@ -94,14 +94,25 @@ class IndexController extends BaseController {
         $user = $this->userInfo['user_id'];
         $isvote = $tpuser->where('tpuser_tp_id = "'.$voteinfo['tp_id'].'" and tpuser_user_id = "'.$user.'"')->count();
         if ($isvote) {
-            $this->error("已经投过票了");
+            $foodresult = $tpfood->where('tpfood_tpid = "'.$voteinfo['tp_id'].'"')->select();
+            $foodtotalvote = $tpuser->where('tpuser_tp_id = "'.$voteinfo['tp_id'].'"')->count();
+            $foodlist = array();
+            foreach ($foodresult as $value) {
+                $foodvote = $tpuser->where('tpuser_food_id = "'.$value['tpfood_id'].'"')->count();
+                $value['foodvote'] = $foodvote;
+                $value['foodvoteperset'] = intval($foodvote/$foodtotalvote*100);
+                $foodlist[] = $value;
+            }
+            $this->assign('foodlist', $foodlist);
+            $this->display('tpjg');
+        } else {
+            $user = $this->userInfo['user_id'];
+            $this->assign('voteinfo', $voteinfo);
+            $this->assign('votefood', $votefood);
+            $this->display();
         }
-        $user = $this->userInfo['user_id'];
-        $this->assign('voteinfo', $voteinfo);
-        $this->assign('votefood', $votefood);
-        $this->display();
     }
-    
+
     public function savetpAction() {
         $post = I('post.');
         if (!count($post['tpuser_food_id'])) {
