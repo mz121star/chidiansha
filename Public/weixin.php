@@ -62,7 +62,7 @@ class weixin {
         } elseif ($object->EventKey == 'ws_jxhd') {
             $jxhdresult = file_get_contents('http://'.$_SERVER['SERVER_NAME'].'/index.php/wx/getjxhd');
             $jxhdresult = json_decode($jxhdresult);
-            $item_str = sprintf($itemTpl, $jxhdresult->jxhd_title, $jxhdresult->jxhd_desc, 'http://'.$_SERVER['SERVER_NAME'].'/upload/'.$jxhdresult->jxhd_date, $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/jxhd');
+            $item_str = sprintf($itemTpl, $jxhdresult->jxhd_title, $jxhdresult->jxhd_desc, 'http://'.$_SERVER['SERVER_NAME'].'/upload/'.$jxhdresult->jxhd_image, $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/jxhd');
         } elseif ($object->Event == 'subscribe' || $object->Event == 'unsubscribe') {
             if (!$_SESSION['access_token']) {
                 $appid = APPID;
