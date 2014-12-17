@@ -63,7 +63,7 @@ class weixin {
             $jxhdresult = file_get_contents($_SERVER['SERVER_NAME'].'/index.php/wx/getjxhd');
             $jxhdresult = json_decode($jxhdresult);
             $item_str = sprintf($itemTpl, $jxhdresult->jxhd_title, $jxhdresult->jxhd_desc, 'http://'.$_SERVER['SERVER_NAME'].'/upload/'.$jxhdresult->jxhd_date, $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/jxhd');
-        } elseif ($object->Event == 'subscribe' || $object->Event == 'unsubscribe') {
+        } elseif ($object->Event == 'subscribe') {
             if (!$_SESSION['access_token']) {
                 $appid = APPID;
                 $appsecret = APPSECRET;
