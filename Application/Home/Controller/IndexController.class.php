@@ -184,9 +184,9 @@ class IndexController extends BaseController {
         $eventType = I('post.eventType');
         $user = M('user');
         if ($eventType == 'subscribe') {
-            $status = 1;
+            $status = '1';
         } else {
-            $status = 0;
+            $status = '0';
         }
         $userinfo = $user->where('user_id = "'.$fromUserName.'"')->find();
         if ($userinfo) {
