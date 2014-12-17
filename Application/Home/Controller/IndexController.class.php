@@ -52,7 +52,16 @@ class IndexController extends BaseController {
     }
 
     public function jxhdAction() {
-        $this->redirect('index/index');
+        $jxhd = M("jxhd");
+        $count = $jxhd->count();
+        $page = new \Think\Page($count, 1);
+        $jxhdlist = $jxhd->order(array('jxhd_date'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
+        $jxhdinfo = array();
+        if (isset($jxhdlist[0])) {
+            $jxhdinfo = $jxhdlist[0];
+        }
+        $this->assign('jxhdinfo', $jxhdinfo);
+        $this->display();
     }
     
     public function jxspAction() {

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="author" content="www.frebsite.nl" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+    <title>今天吃点啥</title>
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="/mobile/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/flexslider.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/jquery.mmenu.all.css" />
+    <link type="text/css" rel="stylesheet" href="/mobile/css/style.css" />
+
+    <script type="text/javascript" src="/mobile/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/mobile/js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="/mobile/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/mobile/js/o-script.js"></script>
+    <script type="text/javascript" src="/js/jquery.tipswindow-2.2.js"></script>
+    <link rel="stylesheet" href="/mobile/css/ali/iconfont.css">
+
+</head>
+<body class="o-page">
+<div id="page">
+<!-- Header -->
+<div id="header">
+    <a href="#menu"><i class="fa fa-bars"></i> </a>
+				<span id="Logo" class="svg">
+					{$jxhdinfo.jxhd_title}				</span>
+    <a class="backBtn" href="/mobile.php"><i class="fa fa-home"></i></a>
+</div>
+
+<div id="page1" >
+    <div class="bannerPane">
+        <section class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+
+                    <li>
+                        <img src="/upload/{$jxhdinfo.jxhd_image}" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+                <div class="detail">
+                    {$jxhdinfo.	jxhd_content}
+
+                </div>
+    <!-- Content -->
+             </div>
+<div id="page2" style="display: none   ">
+    <div class="cbox-post-wap cbox-post-b"><form name="form1" method="post" action="__MODULE__/index/comment">
+        <input type="hidden" name="commentfood_id" value="{$foodinfo.food_id}">
+        <div class="post-area-wap post-area-b">
+            <textarea name="comment_content" rows="3" class="area-text-wap area-text-b" placeholder="我来说两句..."></textarea>
+        </div>
+        <div><button class="mdish-price" type="submit">发布留言</button></div>
+    </form></div>
+<foreach name="commentlist" item="comment">
+    <div class="menu-dish ng-scope" ng-repeat="food in foods">
+        <div class="mdish-info">
+            <p class="mdish-name ng-binding" ng-bind="food.name">{$comment.comment_content|nl2br}</p>
+            <p class="mdish-misc">
+                <span class="state_bg1"></span>
+                <span class="mdish-sales ng-scope" ng-if="food.sales > 0">{$comment.commentuser_name}</span>
+            </p>
+            <p class="mdish-misc">
+                <span class="state_bg1"></span>
+                <span class="mdish-sales ng-scope" ng-if="food.sales > 0">{$comment.comment_date}</span>
+            </p>
+        </div>
+    </div>
+</foreach>
+</div>
+
+<a class="menu-cart  "    > </a>
+<!-- Menu navigation -->
+<style>
+    .mm-search{display:none}
+</style>
+<script>
+    $(function () {
+        $("#logout").on("click",function(){
+            if (confirm('确定要退出登录吗？')) {
+                location.href = "/mobile.php/index/logout";
+            }
+
+        })
+    });
+
+</script>
+<include file="Index:leftbar"/>
+</div>
+
+</div>
+
+<script>
+    $(function(){
+
+
+
+        $("#favshop").on("click",function(){
+            var _self=this;
+            $.get("__MODULE__/fav/{$foodinfo.food_id}").success(function(d){
+                alert(d);
+            })
+        });
+        $("#popupDialog-detail").on("click",function(){
+                $("#page2").show();
+                $("#page1").hide();
+            $(this).addClass("current-tab");
+            $("#popupDialog-type").removeClass("current-tab")  ;
+        })
+        $("#popupDialog-type").on("click",function(){
+            $("#page1").show();
+            $("#page2").hide();
+            $(this).addClass("current-tab");
+            $("#popupDialog-detail").removeClass("current-tab")  ;
+        })
+    })
+</script>
+
+</body>
+</html>
