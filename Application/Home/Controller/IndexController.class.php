@@ -6,7 +6,13 @@ class IndexController extends BaseController {
     public function sendAction() {
         $userID = I('get.uid');
         $actionto = I('get.ac');
-        session('userinfo', array('user_id' => $userID));
+        $userobj = M('user');
+        $userinfo = $userobj->field('user_id, user_name, user_regdate, user_image')->where('user_id = "'.$userID.'"')->find();
+        if ($userinfo) {
+            session('userinfo', $userinfo);
+        } else {
+            session('userinfo', array('user_id' => $userID, 'user_name'=>'访客'));
+        }
         $this->redirect('index/'.$actionto);
     }
 
