@@ -145,6 +145,10 @@ class IndexController extends BaseController {
         $favobj = M('fav');
         $data['favfood_id'] = $foodid;
         $data['favuser_id'] = $this->userInfo['user_id'];
+        $isfav = $favobj->where($data)->count();
+        if ($isfav) {
+            echo '已经收藏过了';exit;
+        }
         $data['fav_date'] = date('Y-m-d H:i:s');
         $favid = $favobj->add($data);
         if ($favid) {
