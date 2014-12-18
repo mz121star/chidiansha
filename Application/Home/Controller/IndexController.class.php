@@ -89,6 +89,7 @@ class IndexController extends BaseController {
     }
     
     public function jxcommentAction() {
+        $this->checklogin();
         $post = filterAllParam('post');
         $post['jxspcom_user_id'] = $this->userInfo['user_id'];
         $post['jxspcom_user_name'] = $this->userInfo['user_name'];
@@ -105,6 +106,7 @@ class IndexController extends BaseController {
     }
     
     public function jxzanAction() {
+        $this->checklogin();
         $jxid = I('get.jxid');
         $jxsp = M('jxsp');
         $jxspinfo = $jxsp->where('jxsp_id = "'.$jxid.'"')->find();
@@ -129,6 +131,7 @@ class IndexController extends BaseController {
     }
 
     public function zjcsAction() {
+        $this->checklogin();
         $toupiao = M("toupiao");
         $count = $toupiao->count();
         $page = new \Think\Page($count, 1);
@@ -164,6 +167,7 @@ class IndexController extends BaseController {
     }
 
     public function savetpAction() {
+        $this->checklogin();
         $post = I('post.');
         if (!count($post['tpuser_food_id'])) {
             $this->error("请选择投票选项");
@@ -206,6 +210,7 @@ class IndexController extends BaseController {
     }
 
     public function favfoodAction() {
+        $this->checklogin();
         $foodid = I('get.foodid');
         $food = M('food');
         $foodinfo = $food->where('food_id = "'.$foodid.'"')->find();
@@ -230,6 +235,7 @@ class IndexController extends BaseController {
     }
 
     public function myfavAction() {
+        $this->checklogin();
         $favobj = M('fav');
         $food = M('food');
         $data['favuser_id'] = $this->userInfo['user_id'];
@@ -244,6 +250,7 @@ class IndexController extends BaseController {
     }
 
     public function commentAction() {
+        $this->checklogin();
         $post = filterAllParam('post');
         $post['commentuser_id'] = $this->userInfo['user_id'];
         $post['commentuser_name'] = $this->userInfo['user_name'];
