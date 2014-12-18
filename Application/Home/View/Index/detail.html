@@ -29,7 +29,7 @@
     <a href="#menu"><i class="fa fa-bars"></i> </a>
 				<span id="Logo" class="svg">
 					{$foodinfo.food_name}				</span>
-    <a class="backBtn" href="/mobile.php"><i class="fa fa-home"></i></a>
+    <a class="backBtn" href="__MODULE__/index/index"><i class="fa fa-home"></i></a>
 </div>
 <div class="subHeader">
     <div class="list_tab">
@@ -52,22 +52,31 @@
         </section>
     </div>
                 <div class="detail">
+                    <if condition="$foodinfo.food_shicai neq ''">
                     <h3>食材</h3>
                     <div class="art">{$foodinfo.food_shicai}</div>
                     <hr>
+                    </if>
+                    <if condition="$foodinfo.food_fucai neq ''">
                     <h3>辅材</h3>
                     <div class="art">{$foodinfo.food_fucai}</div>
                     <hr>
+                    </if>
+                    <if condition="$foodinfo.food_zhunbei neq ''">
                     <h3>准备工作</h3>
                     <div class="art">{$foodinfo.food_zhunbei}</div>
                     <hr>
+                    </if>
+                    <if condition="$foodinfo.food_buzhou neq ''">
                     <h3>制作步骤</h3>
                     <div class="art">{$foodinfo.food_buzhou}</div>
                     <hr>
+                    </if>
+                    <if condition="$foodinfo.food_qita neq ''">
                     <h3>其它</h3>
                     <div class="art">{$foodinfo.food_qita}</div>
                     <hr>
-
+                    </if>
                 </div>
     <!-- Content -->
              </div>

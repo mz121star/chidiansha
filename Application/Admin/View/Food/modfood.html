@@ -9,46 +9,46 @@
                 <input type="text" class="form-control" id="food_name" name="food_name" value="{$foodinfo.food_name}" required autofocus>
               </div>
             </div>
-            <div class="form-group">
-              <label for="password" class="col-sm-2 control-label">食材</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="food_shicai" name="food_shicai" value="{$foodinfo.food_shicai}" placeholder="秋葵350g，鲜虾200g">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="status" class="col-sm-2 control-label">辅材</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="food_fucai" name="food_fucai" value="{$foodinfo.food_fucai}" placeholder="秋葵350g，鲜虾200g">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="type1" class="col-sm-2 control-label">准备工作</label>
-              <div class="col-sm-10">
-                  <input type="text" class="form-control" id="food_zhunbei" name="food_zhunbei" value="{$foodinfo.food_zhunbei}" placeholder="秋葵350g，鲜虾200g">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="description" class="col-sm-2 control-label">制作步骤</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="food_buzhou" name="food_buzhou" value="{$foodinfo.food_buzhou}" placeholder="秋葵350g，鲜虾200g">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="address" class="col-sm-2 control-label">其他</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="food_qita" name="food_qita" value="{$foodinfo.food_qita}" placeholder="秋葵350g，鲜虾200g">
-              </div>
-            </div>
-            <div class="form-group">
+           <div class="form-group">
               <label for="address" class="col-sm-2 control-label">期数</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control" id="food_qishu" name="food_qishu" value="{$foodinfo.food_qishu}" placeholder="秋葵350g，鲜虾200g">
               </div>
             </div>
             <div class="form-group">
+              <label for="password" class="col-sm-2 control-label">食材</label>
+              <div class="col-sm-10">
+                  <script name="food_shicai" id="food_shicai">{$foodinfo.food_shicai}</script>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="status" class="col-sm-2 control-label">辅材</label>
+              <div class="col-sm-10">
+                  <script name="food_fucai" id="food_fucai">{$foodinfo.food_fucai}</script>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="type1" class="col-sm-2 control-label">准备工作</label>
+              <div class="col-sm-10">
+                  <script name="food_zhunbei" id="food_zhunbei">{$foodinfo.food_zhunbei}</script>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description" class="col-sm-2 control-label">制作步骤</label>
+              <div class="col-sm-10">
+                  <script name="food_buzhou" id="food_buzhou">{$foodinfo.food_buzhou}</script>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address" class="col-sm-2 control-label">其他</label>
+              <div class="col-sm-10">
+                  <script name="food_qita" id="food_qita">{$foodinfo.food_qita}</script>
+              </div>
+            </div>
+            <div class="form-group">
               <label for="address" class="col-sm-2 control-label">菜肴描述</label>
               <div class="col-sm-10">
-                <textarea name="food_desc" id="food_desc" rows="6" cols="75">{$foodinfo.food_desc}</textarea>
+                  <script name="food_desc" id="food_desc">{$foodinfo.food_desc}</script>
               </div>
             </div>
             <div class="form-group">
@@ -105,4 +105,66 @@ $(function () {
     });
 });
 </script>
+<script type="text/javascript " src="/ueditor/ueditor.config.js "></script>
+<script type="text/javascript " src="/ueditor/ueditor.all.js "></script>
+<script type="text/javascript">
+ var editor = UE.getEditor('food_shicai', {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'simpleupload', 'insertimage']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true,
+    initialFrameHeight:100,
+    initialFrameWidth:520
+});
 
+ var editor = UE.getEditor('food_fucai', {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'simpleupload', 'insertimage']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true,
+    initialFrameHeight:100,
+    initialFrameWidth:520
+});
+
+ var editor = UE.getEditor('food_zhunbei', {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'simpleupload', 'insertimage']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true,
+    initialFrameHeight:100,
+    initialFrameWidth:520
+});
+
+ var editor = UE.getEditor('food_buzhou', {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'simpleupload', 'insertimage']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true,
+    initialFrameHeight:100,
+    initialFrameWidth:520
+});
+
+ var editor = UE.getEditor('food_qita', {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'simpleupload', 'insertimage']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true,
+    initialFrameHeight:100,
+    initialFrameWidth:520
+});
+
+ var editor = UE.getEditor('food_desc', {
+    toolbars: [
+        ['fullscreen', 'source', 'undo', 'redo', 'simpleupload', 'insertimage']
+    ],
+    autoHeightEnabled: true,
+    autoFloatEnabled: true,
+    initialFrameHeight:100,
+    initialFrameWidth:520
+});
+</script>

@@ -67,7 +67,7 @@ class FoodController extends BaseController {
             $_POST['food_image'] = $uploadinfo['savepath'].$uploadinfo['savename'];
         }
         $food = M("Food");
-        $post = filterAllParam('post');
+        $post = $_POST;
         if (isset($post['food_id']) && $post['food_id']) {
             unset($post['delfood_image']);
             $foodid = $food->where('food_id="'.$post['food_id'].'"')->save($post);

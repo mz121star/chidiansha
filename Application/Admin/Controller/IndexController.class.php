@@ -95,7 +95,7 @@ class IndexController extends BaseController {
             $_POST['jxhd_image'] = $uploadinfo['savepath'].$uploadinfo['savename'];
         }
         $jxhd = M("jxhd");
-        $post = filterAllParam('post');
+        $post = $_POST;
         if (isset($post['jxhd_id']) && $post['jxhd_id']) {
             unset($post['deljxhd_image']);
             $foodid = $jxhd->where('jxhd_id="'.$post['jxhd_id'].'"')->save($post);
