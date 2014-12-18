@@ -26,7 +26,7 @@ class IndexController extends BaseController {
         }
         $food = M('food');
         $fav = M('fav');
-        $foodresult = $food->where('food_type = "0"')->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
+        $foodresult = $food->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
         $foodlist = array();
         foreach ($foodresult as $value) {
             $favcount = $fav->where('favfood_id = "'.$value['food_id'].'"')->count();
@@ -65,17 +65,67 @@ class IndexController extends BaseController {
     }
     
     public function jxspAction() {
-        $food = M('food');
-        $comment = M('comment');
-        $foodresult = $food->where('food_type = "1"')->order('food_adddate desc')->select();
-        $foodlist = array();
-        foreach ($foodresult as $value) {
-            $commentcount = $comment->where('commentfood_id = "'.$value['food_id'].'"')->count();
-            $value['comcount'] = $commentcount;
-            $foodlist[] = $value;
-        }
+        $jxsp = M('jxsp');
+        $jxspcom = M('jxspcom');
+        $foodlist = $jxsp->order('jxsp_date desc')->select();
         $this->assign('foodlist', $foodlist);
         $this->display();
+    }
+    
+    public function jxdetailAction() {
+        $jxid = I('get.jxid');
+        $jxsp = M('jxsp');
+        $jxspinfo = $jxsp->where('jxsp_id = "'.$jxid.'"')->find();
+        if (!$jxspinfo) {
+            $this->error("商品不存在");
+        }
+        $this->assign('jxspinfo', $jxspinfo);
+        $jxspcom = M('jxspcom');
+        $commentcount = $jxspcom->where('jxspcom_jxsp_id = "'.$jxid.'"')->count();
+        $commentlist = $jxspcom->where('jxspcom_jxsp_id = "'.$jxid.'"')->select();
+        $this->assign('commentlist', $commentlist);
+        $this->assign('commentcount', $commentcount);
+        $this->display();
+    }
+    
+    public function jxcommentAction() {
+        $post = filterAllParam('post');
+        $post['jxspcom_user_id'] = $this->userInfo['user_id'];
+        $post['jxspcom_user_name'] = $this->userInfo['user_name'];
+        $post['jxspcom_date'] = date('Y-m-d H:i:s');
+        $jxspcom = M('jxspcom');
+        $commentid = $jxspcom->add($post);
+        if ($commentid) {
+            $jxsp = M('jxsp');
+            $jxsp->where('jxsp_id = "'.$post['jxspcom_jxsp_id'].'"')->setInc('jxsp_comcount');
+            $this->success('评论成功');
+        } else {
+            $this->error("评论失败");
+        }
+    }
+    
+    public function jxzanAction() {
+        $jxid = I('get.jxid');
+        $jxsp = M('jxsp');
+        $jxspinfo = $jxsp->where('jxsp_id = "'.$jxid.'"')->find();
+        if (!$jxspinfo) {
+            echo '精选商品不存在';exit;
+        }
+        $jxspzan = M('jxspzan');
+        $data['jxspzan_jxsp_id'] = $jxid;
+        $data['jxspzan_user_id'] = $this->userInfo['user_id'];
+        $iszan = $jxspzan->where($data)->count();
+        if ($iszan) {
+            echo '已经赞过了';exit;
+        }
+        $data['jxspzan_date'] = date('Y-m-d H:i:s');
+        $zanid = $jxspzan->add($data);
+        if ($zanid) {
+            $jxsp->where('jxsp_id = "'.$jxid.'"')->setInc('jxsp_zancount');;
+            echo '成功点赞';exit;
+        } else {
+            echo '点赞失败';exit;
+        }
     }
 
     public function zjcsAction() {

@@ -29,34 +29,36 @@
         <a href="#menu"><i class="fa fa-bars"></i> </a>
 				<span id="Logo" class="svg">
 					精选商品				</span>
-        <a class="backBtn" href="/mobile.php"><i class="fa fa-home"></i></a>
+        <a class="backBtn" href="__MODULE__/index/index"><i class="fa fa-home"></i></a>
     </div>
 
     <div class="subHeader">
         <div class="list_tab">
-            <a href="javascript:void(0)" class="tab2 current-tab"  id="popupDialog-type">食品</a>
+            <a href="javascript:void(0)" class="tab2 current-tab"  id="popupDialog-type">精选商品</a>
             <a href="javascript:void(0)" class="tab3"  id="popupDialog-detail" data-diancan="1">其它</a>
         </div>
     </div>
     <div id="page1" >
         <foreach name="foodlist" item="food">
         <div class="geo-rst-list">
-            <a class="grst-block " href="__MODULE__/detail/{$food.food_id}">
-                <img class="grst-logo" width="42" height="42"   alt="{$food.food_name}" src="/upload/{$food.food_image}">
+            <a class="grst-block " href="__MODULE__/jxdetail/{$food.jxsp_id}">
+                <img class="grst-logo" width="42" height="42"   alt="{$food.jxsp_title}" src="/upload/{$food.jxsp_image}">
                 <div class="grst-detail">
                     <div class="grst-name">
-                        <span>{$food.food_name}</span>
+                        <span>{$food.jxsp_title}</span>
                     </div>
                     <hr style="margin:4px 0 4px 0 ">
                     <div class="grst-misc">
-                        <span class="art" >{$food.food_desc}</span>
+                        <span class="art" >{$food.jxsp_desc}</span>
                     </div>
                 </div>
 
             </a>
             <div class="share-tool">
                 <ul class="jxsp-tool">
-                    <li>{$food.comcount}评论</li>
+                    <li>{$food.jxsp_comcount}评论</li>
+                    <li>{$food.jxsp_zancount}赞</li>
+                    <li>分享</li>
                 </ul>
             </div>
         </div>
@@ -80,21 +82,5 @@
     </script>
     <include file="Index:leftbar"/>
 </div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
 </body>
 </html>

@@ -12,6 +12,8 @@ $private_config = array(
                                                   'wx/event' => 'Index/event',
                                                   'wx/getjxhd' => 'Index/getjxhd',
                                                   'detail/:foodid' => 'Index/detail',
+                                                  'jxdetail/:jxid' => 'Index/jxdetail',
+                                                  'jxzan/:jxid' => 'Index/jxzan',
                                                   'fav/:foodid' => 'Index/favfood',
                                                   'weixin/:uid/:ac' => 'Index/send'
                                                   )

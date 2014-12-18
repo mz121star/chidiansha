@@ -28,7 +28,6 @@ CREATE TABLE `weishi_food` (
   `food_image` varchar(500) NOT NULL,
   `food_favcount` int(11) unsigned NOT NULL default 0,
   `food_desc` text NOT NULL,
-  `food_type` enum('0','1') NOT NULL,
   `food_difficulty` int(11) unsigned NOT NULL default 1,
   PRIMARY KEY (`food_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='菜品表';
