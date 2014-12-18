@@ -97,3 +97,39 @@ CREATE TABLE `weishi_jxhd` (
   `jxhd_date` datetime NOT NULL,
   PRIMARY KEY (`jxhd_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='精选活动表';
+
+
+DROP TABLE IF EXISTS `weishi_jxsp`;
+CREATE TABLE `weishi_jxsp` (
+  `jxsp_id` int(11) NOT NULL auto_increment,
+  `jxsp_title` varchar(100) NOT NULL,
+  `jxsp_desc` varchar(500) NOT NULL,
+  `jxsp_content` text NOT NULL,
+  `jxsp_image` varchar(100) NOT NULL,
+  `jxsp_zancount` int(11) unsigned NOT NULL default 0,
+  `jxsp_comcount` int(11) unsigned NOT NULL default 0,
+  `jxsp_date` datetime NOT NULL,
+  PRIMARY KEY (`jxsp_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='精选商品表';
+
+
+DROP TABLE IF EXISTS `weishi_jxspzan`;
+CREATE TABLE `weishi_jxspzan` (
+  `jxspzan_id` int(11) NOT NULL auto_increment,
+  `jxspzan_jxsp_id` varchar(100) NOT NULL,
+  `jxspzan_user_id` varchar(100) NOT NULL,
+  `jxspzan_date` datetime NOT NULL,
+  PRIMARY KEY (`jxspzan_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='精选商品赞表';
+
+
+DROP TABLE IF EXISTS `weishi_jxspcom`;
+CREATE TABLE `weishi_jxspcom` (
+  `jxspcom_id` int(11) NOT NULL auto_increment,
+  `jxspcom_jxsp_id` int(11) unsigned NOT NULL,
+  `jxspcom_user_id` varchar(50) NOT NULL,
+  `jxspcom_user_name` varchar(50) NOT NULL,
+  `jxspcom_content` text NOT NULL,
+  `jxspcom_date` datetime NOT NULL,
+  PRIMARY KEY (`jxspcom_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='精选商品评论表';

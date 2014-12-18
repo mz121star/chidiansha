@@ -161,4 +161,85 @@ class IndexController extends BaseController {
             curl_close($ch);
             echo $item_str;exit;
     }
+    
+    public function jxspAction() {
+        $jxsp = M("jxsp");
+        $count = $jxsp->count();
+        $page = new \Think\Page($count, 10);
+        $jxsplist = $jxsp->order(array('jxsp_date'=>'desc'))->limit($page->firstRow.','.$page->listRows)->select();
+        $show = $page->show();
+        $this->assign('page',$show);
+        $this->assign('jxsplist', $jxsplist);
+        $this->display();
+    }
+
+    public function addjxspAction() {
+        $this->display();
+    }
+
+    public function modjxspAction() {
+        $spid = I('get.spid');
+        $jxsp = M("jxsp");
+        $jxspinfo = $jxsp->where('jxsp_id="'.$spid.'"')->find();
+        if (!$jxspinfo) {
+            $this->error("精选商品不存在");
+        }
+        $this->assign('jxspinfo', $jxspinfo);
+        $this->display();
+    }
+
+    public function deljxspAction() {
+        $spid = I('get.spid');
+        $jxsp = M("jxsp");
+        $jxspinfo = $jxsp->where('jxsp_id="'.$spid.'"')->find();
+        if ($jxspinfo) {
+            $jxspnumber = $jxsp->where('jxsp_id="'.$spid.'"')->delete();
+            if ($jxspnumber) {
+                unlink('./upload/'.$jxspinfo['jxsp_image']);
+                $jxspcom = M("jxspcom");
+                $jxspcom->where('jxspcom_jxsp_id = "'.$spid.'"')->delete();
+                $jxspzan = M("jxspzan");
+                $jxspzan->where('jxspzan_jxsp_id = "'.$spid.'"')->delete();
+                $this->success('删除精选商品成功');
+            } else {
+                $this->error("删除精选商品失败");
+            }
+        } else {
+            $this->error("删除精选商品失败");
+        }
+    }
+
+    public function savejxspAction() {
+        $isdelimage = I('post.deljxsp_image');
+        if ($isdelimage) {
+            $_POST['jxsp_image'] = '';
+            unlink('./upload/'.$isdelimage);
+        }
+        if ($_FILES['jxsp_image']['name']) {
+            $upload = new \Think\Upload();
+            $upload->maxSize = 3145728;//3M
+            $upload->exts = array('jpg', 'gif', 'png', 'jpeg');
+            $upload->rootPath = './upload/';
+            $uploadinfo = $upload->uploadOne($_FILES['jxsp_image']);
+            if(!$uploadinfo) {
+                $this->error($upload->getError());
+            }
+            $_POST['jxsp_image'] = $uploadinfo['savepath'].$uploadinfo['savename'];
+        }
+        $jxsp = M("jxsp");
+        $post = $_POST;
+        if (isset($post['jxsp_id']) && $post['jxsp_id']) {
+            unset($post['deljxsp_image']);
+            $foodid = $jxsp->where('jxsp_id="'.$post['jxsp_id'].'"')->save($post);
+        } else {
+            $post['jxsp_date'] = date('Y-m-d H:i:s');
+            $foodid = $jxsp->add($post);
+        }
+        if ($foodid) {
+            $this->success('保存精选商品成功', 'jxsp');
+        } else {
+            $this->error("保存精选商品失败");
+        }
+    }
+    
 }
