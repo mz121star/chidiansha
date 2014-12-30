@@ -24,9 +24,14 @@ class IndexController extends BaseController {
         } elseif ($order == 'dif') {
             $orderby = 'food_difficulty desc';
         }
+        $search_name = I('get.search_name');
+        $where = array();
+        if ($search_name) {
+            $where['food_name'] = array('like', '%'.$search_name.'%');
+        }
         $food = M('food');
         $fav = M('fav');
-        $foodresult = $food->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
+        $foodresult = $food->where($where)->field('food_id,food_name,food_adddate,food_qishu,food_image')->order($orderby)->select();
         $foodlist = array();
         foreach ($foodresult as $value) {
             $favcount = $fav->where('favfood_id = "'.$value['food_id'].'"')->count();
@@ -35,6 +40,7 @@ class IndexController extends BaseController {
         }
         $this->assign('foodlist', $foodlist);
         $this->assign('order', $order);
+        $this->assign('search_name', $search_name);
         $this->display();
     }
 
