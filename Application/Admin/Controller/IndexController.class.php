@@ -2,6 +2,16 @@
 namespace Admin\Controller;
 
 class IndexController extends BaseController {
+    
+    public function picAction() {
+        $userobj = M("user");
+        $count = $userobj->count();
+        $page = new \Think\Page($count, 10);
+        $userlist = $userobj->field('user_name, user_image')->where('user_image != ""')->limit($page->firstRow.','.$page->listRows)->select();
+        $this->assign('page',$show);
+        $this->assign('userlist', $userlist);
+        $this->display();
+    }
 
     public function indexAction(){
         $this->display();
