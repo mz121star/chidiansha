@@ -2843,7 +2843,8 @@ button.logreg-btn {
     text-decoration: none;
     font-family: "\5FAE\8F6F\96C5\9ED1"
 ;
-    font-size: 17px;
+    font-size: 15px;
+    border-radius: -5px;
 }
 
 .list_tab a:after {
