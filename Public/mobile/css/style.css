@@ -1872,16 +1872,19 @@ button.logreg-btn {
 }
 
 .grst-status {
-    margin: 2px 0;
+    margin: 2px 13px;
     color: #fff;
     font-size: 0.7em
 ;
-    padding-top: 11px;
+    padding-top: 4px;
+    text-align: right;
+    width: 80px;
+    float: right;
 }
 
 .grst-status>.bookable,.grst-status>.unavailable {
     display: inline-block;
-    padding: 2px 4px;
+    padding: 8px 4px;
     border-radius: 2px
 }
 
@@ -1896,7 +1899,7 @@ button.logreg-btn {
 .grst-misc {
     color: #666;
     font-size: 1em;
-    padding-top: 7px;
+    padding-top: 12px;
 }
 
 .grst-misc.grst-misc-close {
