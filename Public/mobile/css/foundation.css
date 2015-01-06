@@ -406,10 +406,10 @@ input[type=submit].button, button.button { -webkit-appearance: none; }
 
 /* Correct FF button padding */
 @-moz-document url-prefix() { button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner { border: none; padding: 0; }
-  input[type="submit"].tiny.button { padding: 3px 10px 4px; }
-  input[type="submit"].small.button { padding: 5px 14px 6px; }
-  input[type="submit"].button, input[type=submit].medium.button { padding: 8px 20px 9px; }
-  input[type="submit"].large.button { padding: 13px 30px 14px; } }
+    input[type="submit"].tiny.button { padding: 3px 10px 4px; }
+    input[type="submit"].small.button { padding: 5px 14px 6px; }
+    input[type="submit"].button, input[type=submit].medium.button { padding: 8px 20px 9px; }
+    input[type="submit"].large.button { padding: 13px 30px 14px; } }
 
 /* Buttons with Dropdowns ---------------------- */
 .button.dropdown { position: relative; padding-right: 44px; /* Sizes */ /* Triangles */ /* Flyout List */ /* Split Dropdown Buttons */ }
@@ -821,7 +821,7 @@ div.progress.round .meter { -webkit-border-radius: 1000px; -moz-border-radius: 1
 
 /* Firefox Fixes */
 @-moz-document url-prefix() { .top-bar ul li .button.small { padding-bottom: 6px; }
-  .top-bar ul li.search form input[type=search] { font-size: 14px; height: 22px; padding: 3px; } }
+    .top-bar ul li.search form input[type=search] { font-size: 14px; height: 22px; padding: 3px; } }
 
 /* IE8 Fixes */
 .lt-ie9 .top-bar ul li a { color: white; display: block; font-weight: bold; font-size: 13px; height: 45px; line-height: 45px; padding: 0 15px; }
@@ -1039,7 +1039,7 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
     .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub { border-color: transparent transparent black transparent; border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent; top: -12px; left: 10px; }
 }
 .searchcontent{height: 34px}
-.searchtxt{width: 57%;
+input[type="text"].searchtxt{width: 57%;
     float: left;
     height: 40px;
     border: 0px;
