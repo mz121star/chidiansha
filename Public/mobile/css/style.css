@@ -1871,6 +1871,8 @@ button.logreg-btn {
     margin: 2px 0;
     color: #fff;
     font-size: 0.7em
+;
+    padding-top: 11px;
 }
 
 .grst-status>.bookable,.grst-status>.unavailable {
@@ -1889,7 +1891,9 @@ button.logreg-btn {
 
 .grst-misc {
     color: #666;
-    font-size: 1em;}
+    font-size: 1em;
+    padding-top: 7px;
+}
 
 .grst-misc.grst-misc-close {
     font-size: 20px;
