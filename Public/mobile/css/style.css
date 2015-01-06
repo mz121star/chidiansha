@@ -1854,6 +1854,8 @@ button.logreg-btn {
     font-size: 1.3em;
     line-height: 1.2;
     word-break: break-all
+;
+    color: #6F665A;
 }
 
 .grst-name>.rst-badge-large {
@@ -2840,14 +2842,16 @@ button.logreg-btn {
     -webkit-box-pack: center;
     -webkit-box-align: center;
     /* font-size: 1.4rem; */
-    color: #654d37;
+    color: #86613F;
     /* padding: 1rem 0; */
-    border-right: 1px solid #DAD1D1;
+    border-right: 1px solid #EAEAEA;
     text-decoration: none;
     font-family: "\5FAE\8F6F\96C5\9ED1"
 ;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: -5px;
+    background-color: f6f2e6;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6));
 }
 
 .list_tab a:after {
