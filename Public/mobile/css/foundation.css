@@ -1038,10 +1038,10 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
     .tooltip { font-size: 14px; line-height: 1.4; padding: 7px 10px 9px 10px; left: 50% !important; max-width: 80% !important; margin-left: -40%; font-size: 110%; }
     .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub { border-color: transparent transparent black transparent; border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent; top: -12px; left: 10px; }
 }
-.searchcontent{height: 34px}
+.searchcontent{height: 34px;padding-top: 11px;border: 0;}
 input[type="text"].searchtxt{width: 57%;
     float: left;
-    height: 40px;
+    height: 30px;
     border: 0px;
     background-color: transparent;
     border-bottom: 2px solid rgb(165, 151, 151);
