@@ -60,11 +60,12 @@ text-indent: -999px;" class="btn search-btn" type="submit" value="搜索">
         <div class="grst-name">
             <span   class="ng-binding">{$food.food_qishu} {$food.food_name}</span>
         </div>
-         <div class="grst-status "  >
-      <span class="bookable " >{$food.favcount|default=0}人收藏</span>
-  </div>
+
         <div class="grst-misc">
             <span >{$food.food_adddate}</span>
+        </div>
+        <div class="grst-status "  >
+            <span class="bookable " >{$food.favcount|default=0}人收藏</span>
         </div>
     </div>
 </a>
