@@ -28,7 +28,7 @@ class weixin {
             $result = $this->receiveEvent($postObj);
             break;
             default:
-            $result = "unknown msg type: ".$RX_TYPE;
+            $this->valid();
             break;
             }
             echo $result;
