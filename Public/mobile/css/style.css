@@ -3106,3 +3106,4 @@ h3{color: #880a0c }
 .share-tool{border-top: 0px solid #c0c0c0;height: 40px;width: 100%}
 .jxsp-tool li {width: 33.333%; float:left ;height: 40px ;line-height: 40px;text-align:center}
 .big{font-size: 1.5em;color: orangered}
+input,button,select,textarea{outline:none;line-height:25px;}
