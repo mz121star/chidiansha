@@ -1879,7 +1879,7 @@ button.logreg-btn {
     padding-top: 4px;
     /* text-align: right; */
     width: 80px;
-    float: right;
+    /* float: right; */
 }
 
 .grst-status>.bookable,.grst-status>.unavailable {
