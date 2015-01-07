@@ -3138,3 +3138,6 @@ input,button,select,textarea{outline:none;line-height:25px;}
 
     font-size: 1.5rem;
 }
+
+#menu{display: none}
+#page{width: 100%;overflow: hidden}
