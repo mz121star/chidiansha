@@ -3108,14 +3108,30 @@ h3{color: #880a0c }
 .big{font-size: 1.5em;color: orangered}
 input,button,select,textarea{outline:none;line-height:25px;}
 .foot-menu{
+    position: fixed;
 
+    background: rgb(102, 66, 0);
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
 }
 .foot-menu ul{
 
 }
 .foot-menu ul li{
+    width: 50%;
+
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    /* color: white; */
 
 }
+.foot-menu ul li:first-child{
+    border-right: 1px solid #fff;
+}
 .foot-menu ul li a{
+    color: #fff;
 
+    font-size: 1.5rem;
 }
