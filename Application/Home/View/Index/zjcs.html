@@ -59,7 +59,7 @@
     <input name="tpuser_tp_id" value="{$voteinfo.tp_id}" type="hidden">
             <div class="art"> {$voteinfo.tp_desc}</div>
             <hr>
-            <ul>
+            <ul style="padding-left: 12px">
                 <foreach name="votefood" item="food">
                     <li><label><input type="checkbox" name="tpuser_food_id[]" value="{$food.tpfood_id}" />  {$food.tpfood_name}</label></li>
                 </foreach>
