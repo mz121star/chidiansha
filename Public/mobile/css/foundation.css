@@ -1039,13 +1039,13 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
     .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub { border-color: transparent transparent black transparent; border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent; top: -12px; left: 10px; }
 }
 .searchcontent{height: 53px;padding-top: 11px;border: 0;margin: 0;}
-input[type="text"].searchtxt{width: 57%;
+input[type="text"].searchtxt{width: 67%;
     float: left;
     height: 30px;
     border: 0px transparent;
     background-color: transparent;
     border-bottom: 2px solid rgb(165, 151, 151);
-    margin-left: 38px;}
+    margin-left: 2px;}
 .search-btn{width: 30%;
     background: #1AA2E2;
     border: 0px;
