@@ -705,7 +705,7 @@ body {
     min-width: 20em;
     min-height: 100%;
     width: 100%;
-    background: #f2f2f2;
+    background: #fff;
     color: #333;
     font: 100%/1.5 "Helvetica Neue","Microsoft Yahei",sans-serif;
     padding-bottom: 10px
@@ -1818,7 +1818,7 @@ button.logreg-btn {
 }
 
 .geo-rst-list {
-    background: #f6f2e6;
+    /* background: #f6f2e6; */
     margin-top: 5px;
 }
 
@@ -2859,7 +2859,7 @@ button.logreg-btn {
     font-size: 16px;
     border-radius: -5px;
     background-color: f6f2e6;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6));
+    /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6)); */
 }
 
 .list_tab a:after {
@@ -3097,7 +3097,7 @@ button.logreg-btn {
     text-align: center;
 }
 
-.current-tab{border-bottom: 4px solid rgb(160, 148, 148);}
+.current-tab{/* border-bottom: 4px solid rgb(160, 148, 148); */background: #EA4343;color: #fff;}
 .fav-comment{width: 100% ;height: 30px}
 h3{color: #880a0c }
 .art{/* text-indent: 2em; */padding-left: 1em;font-size: 1.3rem;font-weight: bold;color: #5A1515;padding-top: 10px;width: 100px;margin: 0 auto;}
