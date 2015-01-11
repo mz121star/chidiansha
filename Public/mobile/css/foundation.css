@@ -141,7 +141,7 @@ form { margin: 0 0 19.41641px; }
 .row form .row.collapse { margin: 0; }
 .row form .row.collapse .column, .row form .row.collapse .columns { padding: 0; }
 
-label { font-size: 16px; color: #4d4d4d; cursor: pointer; display: block; font-weight: 500; margin-bottom: 3px; }
+label { font-size: 12px; color: #4d4d4d; cursor: pointer; display: block; font-weight: 500; margin-bottom: 3px; }
 label.right { float: none; text-align: right; }
 label.inline { line-height: 30px; margin: 0 0 12px 0; }
 
@@ -1045,7 +1045,7 @@ input[type="text"].searchtxt{width: 80%;
     border: 0px transparent;
     background-color: transparent;
     border-bottom: 2px solid rgb(165, 151, 151);
-    margin-left: 4%;}
+    margin-left: 4%;-webkit-appearance: none;outline: none;border-top: 0px solid transparent;box-shadow: none;}
 .search-btn{width: 30%;
     background: #1AA2E2;
     border: 0px;
