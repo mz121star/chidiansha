@@ -1882,7 +1882,7 @@ button.logreg-btn {
     padding-top: 4px;
     /* text-align: right; */
     width: 80px;
-    /* float: right; */
+    float: left;
 }
 
 .grst-status>.bookable,.grst-status>.unavailable {
@@ -1892,7 +1892,9 @@ button.logreg-btn {
 }
 
 .grst-status>.bookable {
-    background: #4bd463
+    /* background: #4bd463
+ */
+    color: #000;
 }
 
 .grst-status>.unavailable {
@@ -1903,6 +1905,8 @@ button.logreg-btn {
     color: #666;
     font-size: 1em;
     padding-top: 12px;
+    width: 100px;
+    float: left;
 }
 
 .grst-misc.grst-misc-close {
