@@ -2865,7 +2865,7 @@ button.logreg-btn {
     background-color: f6f2e6;
     /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6)); */
 }
-
+.list_tab .current-tab{color:#fff}
 .list_tab a:after {
     content: "";
     /* background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAALBAMAAABv+6sJAAAAIVBMVEUAAABXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1ffA55cAAAACnRSTlMAA5+Ymo8GCa7pLAkHJQAAAFJJREFUCNdjYChgAAIwxbFYAMQSXsHAkLVKEchi1FqVwMC6ahFQWGjVUqCAFVAYKOgAZDIDhYVWLQGyQMJqYEGw8EqQIFQYJAgRBgrCQFQAiAQAGbYU57mg1kEAAAAASUVORK5CYII=") no-repeat 0 center; */
