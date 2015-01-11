@@ -935,9 +935,9 @@ input {
 
 .ui-btn {
     display: block;
-    width: 90%;
+    width: 80px;
     padding: 10px 0;
-    background: #3199e8;
+    background: #EF4A63;
     border: none;
     color: #fff;
     border-radius: 2px;
@@ -3100,7 +3100,7 @@ button.logreg-btn {
 .current-tab{border-bottom: 4px solid rgb(160, 148, 148);}
 .fav-comment{width: 100% ;height: 30px}
 h3{color: #880a0c }
-.art{/* text-indent: 2em; */padding-left: 1em;font-size: 1.3rem;font-weight: bold;color: #5A1515;padding-top: 10px;}
+.art{/* text-indent: 2em; */padding-left: 1em;font-size: 1.3rem;font-weight: bold;color: #5A1515;padding-top: 10px;width: 100px;margin: 0 auto;}
 .detail{padding-left: 5px}
 .progress{display: inline-block;
 
