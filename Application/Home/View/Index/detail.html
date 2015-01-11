@@ -20,10 +20,10 @@
     <script type="text/javascript" src="/mobile/js/o-script.js"></script>
     <script type="text/javascript" src="/js/jquery.tipswindow-2.2.js"></script>
     <link rel="stylesheet" href="/mobile/css/ali/iconfont.css">
-
+ <style>.art{width: 100%}</style>
 </head>
 <body class="o-page">
-<div id="page">
+<div id="page" style="padding-top:40px;">
 <!-- Header -->
 <!--<div id="header">
     <a href="#menu"><i class="fa fa-bars"></i> </a>
@@ -31,7 +31,9 @@
 					{$foodinfo.food_name}				</span>
     <a class="backBtn" href="__MODULE__/index/index"><i class="fa fa-home"></i></a>
 </div>-->
-<div class="subHeader">
+<div class="subHeader" style="position: fixed;
+top: 0px;
+z-index: 99;">
     <div class="list_tab">
         <a href="javascript:void(0)" class="tab2 current-tab"  id="popupDialog-type">做法</a>
         <a href="javascript:void(0)" class="tab3"  id="popupDialog-detail" data-diancan="1">评论({$commentcount|default=0})</a>
