@@ -83,12 +83,23 @@ z-index: 99;">
     <!-- Content -->
              </div>
 <div id="page2" style="display: none   ">
-    <div class="cbox-post-wap cbox-post-b"><form name="form1" method="post" action="__MODULE__/index/comment">
+    <div class="cbox-post-wap cbox-post-b" style="position: fixed;
+bottom: 22px;
+width: 100%;
+/* background-color: rgb(69, 52, 43); */
+border: 1px solid rgb(245, 121, 57);"><form name="form1" method="post" action="__MODULE__/index/comment">
         <input type="hidden" name="commentfood_id" value="{$foodinfo.food_id}">
         <div class="post-area-wap post-area-b">
-            <textarea name="comment_content" rows="3" class="area-text-wap area-text-b" placeholder="我来说两句..."></textarea>
+            <textarea style="background-color: rgb(247, 247, 173);" name="comment_content" rows="3" class="area-text-wap area-text-b" placeholder="我来说两句..."></textarea>
         </div>
-        <div><button class="mdish-price" type="submit">发布留言</button></div>
+        <div style="width: 100%;
+margin: 0 auto;"><button class="mdish-price" style="background: #3660E5;
+box-shadow: none;
+border: 0;
+width: 100%;
+line-height: 40px;
+text-align: center;
+margin: 0 auto;" type="submit">发布留言</button></div>
     </form></div>
 <foreach name="commentlist" item="comment">
     <div class="menu-dish ng-scope" ng-repeat="food in foods">

@@ -2179,7 +2179,7 @@ button.logreg-btn {
 }
 
 .mdish-minus,.mdish-price {
-    background: #3199e8;
+    background: #E53636;
     border-radius: 2px;
     color: #fff
 }
@@ -3119,7 +3119,7 @@ input,button,select,textarea{outline:none;line-height:25px;}
 .foot-menu{
     position: fixed;
 
-    background: rgb(102, 66, 0);
+    background: #E53333;
     width: 100%;
     height: 40px;
     bottom: 0px;
