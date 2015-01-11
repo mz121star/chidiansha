@@ -31,6 +31,7 @@ body {
 body *
 {
     text-shadow: none;
+    font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6
 {
@@ -1861,6 +1862,7 @@ button.logreg-btn {
     word-break: break-all
 ;
     color: #6F665A;
+    margin-bottom: 7px;
 }
 
 .grst-name>.rst-badge-large {
@@ -1881,7 +1883,7 @@ button.logreg-btn {
 ;
     padding-top: 4px;
     /* text-align: right; */
-    width: 80px;
+    width: 100px;
     float: left;
 }
 
@@ -1894,7 +1896,7 @@ button.logreg-btn {
 .grst-status>.bookable {
     /* background: #4bd463
  */
-    color: #000;
+    color: #EA4343;
 }
 
 .grst-status>.unavailable {
@@ -1903,7 +1905,7 @@ button.logreg-btn {
 
 .grst-misc {
     color: #666;
-    font-size: 1em;
+    font-size: 16px;
     padding-top: 12px;
     width: 100px;
     float: left;
