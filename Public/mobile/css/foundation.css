@@ -141,7 +141,7 @@ form { margin: 0 0 19.41641px; }
 .row form .row.collapse { margin: 0; }
 .row form .row.collapse .column, .row form .row.collapse .columns { padding: 0; }
 
-label { font-size: 12px; color: #4d4d4d; cursor: pointer; display: block; font-weight: 500; margin-bottom: 3px; }
+label { font-size: 16px; color: #4d4d4d; cursor: pointer; display: block; font-weight: 500; margin-bottom: 3px; }
 label.right { float: none; text-align: right; }
 label.inline { line-height: 30px; margin: 0 0 12px 0; }
 
