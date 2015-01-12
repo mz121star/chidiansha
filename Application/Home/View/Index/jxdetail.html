@@ -81,10 +81,13 @@
 </foreach>
 </div>
 
-<a class="menu-cart  "    > </a>
-<a class="menu-cart ng-scope"  id="favshop" style="margin-left: 60%;">
-    <div class="mcart-checkout"  ><i class="fa fa-star" style="font-size: 1rem;"></i>赞</div>
-</a>
+
+    <div class="foot-menu">
+        <ul>
+            <li><a href="#" id="favshop">赞一下</a> </li>
+            <li><a href="#" class="pinglun">评论</a> </li>
+        </ul>
+    </div>
 <!-- Menu navigation -->
 <style>
     .mm-search{display:none}
@@ -116,6 +119,12 @@
                 alert(d);
             })
         });
+        $(".pinglun").on("click",function(){
+            $("#page2").show();
+            $("#page1").hide();
+            $("#popupDialog-detail").addClass("current-tab");
+            $("#popupDialog-type").removeClass("current-tab")  ;
+        })
         $("#popupDialog-detail").on("click",function(){
                 $("#page2").show();
                 $("#page1").hide();
