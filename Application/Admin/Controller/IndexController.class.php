@@ -151,8 +151,7 @@ class IndexController extends BaseController {
                                                                      "type":"click",
                                                                       "name":"我的收藏",
                                                                       "key":"ws_myfav"
-                                                                }
-                                                                ]
+                                                                }]
                                                              },
 
                                                              {
