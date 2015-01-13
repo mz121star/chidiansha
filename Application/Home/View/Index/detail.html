@@ -162,21 +162,21 @@ margin: 0 auto;" type="submit">发布留言</button></div>
             $("#page1").hide();
             $("#popupDialog-detail").addClass("current-tab");
             $("#popupDialog-type").removeClass("current-tab")  ;
-            $(".foot-menu").hide()
+            $(".foot-menu").show()
         })
         $("#popupDialog-detail").on("click",function(){
                 $("#page2").show();
                 $("#page1").hide();
             $(this).addClass("current-tab");
             $("#popupDialog-type").removeClass("current-tab")  ;
-            $(".foot-menu").show()
+            $(".foot-menu").hide()
         })
         $("#popupDialog-type").on("click",function(){
             $("#page1").show();
             $("#page2").hide();
             $(this).addClass("current-tab");
             $("#popupDialog-detail").removeClass("current-tab")  ;
-            $(".foot-menu").hide()
+            $(".foot-menu").show()
         })
     })
 </script>
