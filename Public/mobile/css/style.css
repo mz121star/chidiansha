@@ -1848,7 +1848,7 @@ button.logreg-btn {
     border-radius: 3px;
     width: 120px;
     height: 70px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 
 .grst-detail {
@@ -2865,6 +2865,8 @@ button.logreg-btn {
     border-radius: -5px;
     background-color: f6f2e6;
     /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6)); */
+    width: 50%;
+    /* font-size: 16px; */
 }
 .list_tab .current-tab{color:#fff}
 .list_tab a:after {
