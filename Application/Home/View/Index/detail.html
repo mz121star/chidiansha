@@ -35,8 +35,8 @@
 top: 0px;
 z-index: 99;">
     <div class="list_tab">
-        <a href="javascript:void(0)" class="tab2 current-tab"  id="popupDialog-type">做法</a>
-        <a href="javascript:void(0)" class="tab3"  id="popupDialog-detail" data-diancan="1">评论({$commentcount|default=0})</a>
+        <a href="javascript:void(0)" class="tab2 current-tab"  id="popupDialog-type">制作方法</a>
+        <a href="javascript:void(0)" class="tab3"  id="popupDialog-detail" data-diancan="1">查看评论({$commentcount|default=0})</a>
     </div>
 </div>
 
@@ -53,6 +53,7 @@ z-index: 99;">
             </div>
         </section>
     </div>
+    <div class="foodname">{$foodinfo.food_name}</div>
                 <div class="detail">
                     <if condition="$foodinfo.food_shicai neq ''">
                     <h3>食材</h3>
