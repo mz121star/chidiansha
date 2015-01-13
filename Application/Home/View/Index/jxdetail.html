@@ -59,10 +59,10 @@
 <div id="page2" style="display: none   ">
 
     <div class="cbox-post-wap cbox-post-b" style="position: fixed;bottom:0px;width: 100%;box-shadow: 1px 4px 15px 10px;">
-        <div class="fabuliuyan">   <button class="mdish-price" type="submit" >发布留言</button> </div>
+        <div class="fabuliuyan">   <button class="mdish-price" type="submit" onclick="$('#liuyanbox').show();$(this).hidden()">发布留言</button> </div>
 
 
-        <form name="form1" method="post" action="__MODULE__/index/jxcomment">
+        <form name="form1" id="liuyanbox" method="post" action="__MODULE__/index/jxcomment" style="display: none">
         <input type="hidden" name="jxspcom_jxsp_id" value="{$jxspinfo.jxsp_id}">
         <div class="post-area-wap post-area-b">
             <textarea  style="background-color: rgb(247, 247, 173);width: 80%;float: left;height:54px;border: 0;" name="jxspcom_content" rows="3" class="area-text-wap area-text-b" placeholder="我来说两句..."></textarea>
