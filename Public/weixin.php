@@ -57,7 +57,10 @@ class weixin {
             $item_str = sprintf($itemTpl, '最近吃啥', '最近吃啥', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai1.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/zjcs');
         } elseif ($object->EventKey == 'ws_jmhb') {
             $item_str = sprintf($itemTpl, '节目汇编', '节目汇编', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai2.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/index');
-        } elseif ($object->EventKey == 'ws_jxsp') {
+        } elseif ($object->EventKey == 'ws_myfav') {
+            $item_str = sprintf($itemTpl, '我的收藏', '点击查看我所有收藏的菜品', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai3.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/myfav');
+        }
+        elseif ($object->EventKey == 'ws_jxsp') {
             $item_str = sprintf($itemTpl, '精选商品', '精选商品', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai3.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/jxsp');
         } elseif ($object->EventKey == 'ws_jxhd') {
             $jxhdresult = file_get_contents('http://'.$_SERVER['SERVER_NAME'].'/index.php/wx/getjxhd');

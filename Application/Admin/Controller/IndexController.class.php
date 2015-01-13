@@ -140,11 +140,21 @@ class IndexController extends BaseController {
                                                                  "name":"最近吃啥",
                                                                  "key":"ws_zjcs"
                                                              },
-                                                             {	
-                                                                 "type":"click",
-                                                                 "name":"节目汇编",
-                                                                 "key":"ws_jmhb"
+                                                             {
+                                                                "name":"节目汇编"，
+                                                                "sub_button":[
+                                                                {
+                                                                     "type":"click",
+                                                                      "name":"今天吃点啥",
+                                                                      "key":"ws_jmhb"
+                                                                }，{
+                                                                     "type":"click",
+                                                                      "name":"我的收藏",
+                                                                      "key":"ws_myfav"
+                                                                }
+                                                                ]
                                                              },
+
                                                              {
                                                                   "name":"精选",
                                                                   "sub_button":[
