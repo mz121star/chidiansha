@@ -156,16 +156,16 @@ class IndexController extends BaseController {
                                                              },
 
                                                              {
-                                                                  "name":"精选",
+                                                                  "name":"伟诗推荐",
                                                                   "sub_button":[
                                                                   {
                                                                       "type":"click",
-                                                                      "name":"精选商品",
+                                                                      "name":"商品推荐",
                                                                       "key":"ws_jxsp"
                                                                    },
                                                                    {
                                                                       "type":"click",
-                                                                      "name":"精选活动",
+                                                                      "name":"活动推荐",
                                                                       "key":"ws_jxhd"
                                                                    }]
                                                               }]

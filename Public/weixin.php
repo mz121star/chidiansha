@@ -61,7 +61,7 @@ class weixin {
             $item_str = sprintf($itemTpl, '我的收藏', '点击查看我所有收藏的菜品', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai3.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/myfav');
         }
         elseif ($object->EventKey == 'ws_jxsp') {
-            $item_str = sprintf($itemTpl, '精选商品', '精选商品', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai3.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/jxsp');
+            $item_str = sprintf($itemTpl, '商品推荐', '查看伟诗为您推荐的商品', 'http://'.$_SERVER['SERVER_NAME'].'/upload/cai3.jpeg', $_SERVER['SERVER_NAME'].'/index.php/weixin/'.$object->FromUserName.'/jxsp');
         } elseif ($object->EventKey == 'ws_jxhd') {
             $jxhdresult = file_get_contents('http://'.$_SERVER['SERVER_NAME'].'/index.php/wx/getjxhd');
             $jxhdresult = json_decode($jxhdresult);
