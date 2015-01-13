@@ -1848,7 +1848,7 @@ button.logreg-btn {
     border-radius: 3px;
     width: 120px;
     height: 70px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .grst-detail {
