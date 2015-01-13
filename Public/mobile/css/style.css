@@ -1849,6 +1849,7 @@ button.logreg-btn {
     width: 120px;
     height: 70px;
     /* border-radius: 10px; */
+    margin-top: 20px;
 }
 
 .grst-detail {
@@ -1909,6 +1910,7 @@ button.logreg-btn {
     padding-top: 12px;
     width: 100%;
     float: left;
+    line-height: 20px;
 }
 
 .grst-misc.grst-misc-close {
@@ -3113,8 +3115,8 @@ h3{color: #880a0c }
 
     background-color: red;
     height: 8px;}
-.share-tool{border-top: 0px solid #c0c0c0;height: 40px;width: 100%}
-.jxsp-tool li {width: 33.333%; float:left ;height: 40px ;line-height: 40px;text-align:center}
+.share-tool{/* border-top: 0px solid #c0c0c0; */height: 40px;width: 100%}
+.jxsp-tool li {width: 33.333%; float:left ;height: 40px ;line-height: 40px;text-align:center;background-color: #F7F7F7;box-shadow: 7px 2px 6px 1px;}
 .big{font-size: 1.5em;color: orangered}
 input,button,select,textarea{outline:none;line-height:25px;}
 .foot-menu{
