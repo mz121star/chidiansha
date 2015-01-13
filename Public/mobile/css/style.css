@@ -3179,3 +3179,11 @@ input,button,select,textarea{outline:none;line-height:25px;}
     height: auto;
     z-index: 20001;
 }
+.fabuliuyan div{background: #EA4343;
+box-shadow: none;
+    border: 0;
+    width: 100%;
+    line-height:52px;
+    text-align: center;
+    height: 54px;
+    margin: 0 auto;;}
