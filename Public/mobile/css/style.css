@@ -3153,11 +3153,29 @@ input,button,select,textarea{outline:none;line-height:25px;}
 #page{width: 100%;overflow: hidden}
 .foodname{
     width: 100%;
-    width100%;text-align: center;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
     /* border-bottom: 1px solid silver; */
     height: 40px;
     line-height: 40px;
     color: #E53333;
+}
+#mcover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 20000;
+}
+#mcover img {
+    position: fixed;
+    /* right: 28px; */
+    /* top: 25%; */
+    width: 100%;
+    height: auto;
+    z-index: 20001;
 }
