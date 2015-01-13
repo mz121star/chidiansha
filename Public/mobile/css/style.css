@@ -1907,7 +1907,7 @@ button.logreg-btn {
     color: #666;
     font-size: 16px;
     padding-top: 12px;
-    width: 100px;
+    width: 100%;
     float: left;
 }
 
