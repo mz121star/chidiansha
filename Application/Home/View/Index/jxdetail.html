@@ -73,10 +73,10 @@ margin: 0 auto;;">发布留言</button></div>
 <foreach name="commentlist" item="comment">
     <div class="menu-dish ng-scope" ng-repeat="food in foods">
         <div class="mdish-info">
-            <p class="mdish-name ng-binding" ng-bind="food.name">{$comment.jxspcom_content|nl2br}</p>
+            <p class="mdish-name ng-binding" ng-bind="food.name">{$comment.jxspcom_user_name}说：</p>
             <p class="mdish-misc">
                 <span class="state_bg1"></span>
-                <span class="mdish-sales ng-scope" ng-if="food.sales > 0">{$comment.jxspcom_user_name}</span>
+                <span class="mdish-sales ng-scope" ng-if="food.sales > 0">{$comment.jxspcom_content|nl2br}</span>
             </p>
             <p class="mdish-misc">
                 <span class="state_bg1"></span>
