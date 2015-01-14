@@ -1821,9 +1821,9 @@ button.logreg-btn {
 
 .geo-rst-list {
     /* background: #F7F7F7; */
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 95px;
+    margin-top: -21px;
+    margin-bottom: 28px;
+    height: 83px;
 }
 
 .grst-block {
@@ -2875,6 +2875,7 @@ button.logreg-btn {
     /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6)); */
     width: 50%;
     /* font-size: 16px; */
+    padding: 0px 2px 0px 18px;
 }
 .list_tab .current-tab{color:#fff}
 .list_tab a:after {
