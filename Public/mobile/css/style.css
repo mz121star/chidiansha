@@ -1894,7 +1894,7 @@ button.logreg-btn {
 
 .grst-status>.bookable,.grst-status>.unavailable {
     display: inline-block;
-    padding: 8px 4px;
+    padding: 9px 4px;
     border-radius: 2px
 }
 
@@ -1902,6 +1902,7 @@ button.logreg-btn {
     /* background: #4bd463
  */
     color: #EA4343;
+    font-size: 14px;
 }
 
 .grst-status>.unavailable {
