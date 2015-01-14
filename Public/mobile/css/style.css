@@ -182,7 +182,7 @@ pre
 #Logo.svg img { max-height: 70px; top: -9px; position: relative; }
 #Logo img { max-height:40px; }
 
-.bannerPane { text-align:center; overflow: hidden; }
+.bannerPane { text-align:center; overflow: hidden; padding: 0 5px;}
 .bannerPane img {  }
 
 h3.title, h4.title {  border-bottom:1px solid #eee; padding-bottom:10px; }
@@ -711,6 +711,8 @@ body {
     color: #333;
     font: 100%/1.5 "Helvetica Neue","Microsoft Yahei",sans-serif;
     padding-bottom: 10px
+;
+    overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -3195,3 +3197,6 @@ input,button,select,textarea{outline:none;line-height:25px;}
     text-align: center;
     height: 54px;
     margin: 0 auto;;}
+#page1{
+    padding-top: 3px;
+}
