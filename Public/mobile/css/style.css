@@ -1865,6 +1865,7 @@ button.logreg-btn {
 ;
     color: #6F665A;
     margin-bottom: 7px;
+    margin-top: 10px;
 }
 
 .grst-name>.rst-badge-large {
@@ -1909,7 +1910,7 @@ button.logreg-btn {
     color: #666;
     font-size: 16px;
     padding-top: 12px;
-    width: 100%;
+    width: 54%;
     float: left;
     line-height: 20px;
 }
