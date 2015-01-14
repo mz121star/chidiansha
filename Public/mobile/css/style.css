@@ -63,7 +63,6 @@ a, a:link, a:active, a:visited, a:hover
 {
     color: #000000;
     text-decoration: none;
-    padding-bottom: 8px;
 }
 pre
 {
@@ -182,7 +181,7 @@ pre
 #Logo.svg img { max-height: 70px; top: -9px; position: relative; }
 #Logo img { max-height:40px; }
 
-.bannerPane { text-align:center; overflow: hidden; padding: 0 5px;}
+.bannerPane { text-align:center; overflow: hidden; }
 .bannerPane img {  }
 
 h3.title, h4.title {  border-bottom:1px solid #eee; padding-bottom:10px; }
@@ -711,8 +710,6 @@ body {
     color: #333;
     font: 100%/1.5 "Helvetica Neue","Microsoft Yahei",sans-serif;
     padding-bottom: 10px
-;
-    overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,p {
@@ -1823,9 +1820,8 @@ button.logreg-btn {
 
 .geo-rst-list {
     /* background: #F7F7F7; */
-    margin-top: -20px;
-    margin-bottom: 28px;
-    height: 118px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .grst-block {
@@ -1849,10 +1845,10 @@ button.logreg-btn {
 
 .grst-logo {
     display: block;
-    margin-right: 9px;
+    margin-right: 16px;
     border-radius: 3px;
-    width: 170px;
-    height: 95px;
+    width: 120px;
+    height: 70px;
     /* border-radius: 10px; */
     margin-top: 20px;
 }
@@ -1864,12 +1860,12 @@ button.logreg-btn {
 
 .grst-name {
     font-size: 1.3em;
-    line-height: 1.4;
+    line-height: 1.2;
     word-break: break-all
 ;
     color: #6F665A;
-    margin-bottom: 42px;
-    margin-top: 14px;
+    margin-bottom: 7px;
+    margin-top: 10px;
 }
 
 .grst-name>.rst-badge-large {
@@ -1896,7 +1892,7 @@ button.logreg-btn {
 
 .grst-status>.bookable,.grst-status>.unavailable {
     display: inline-block;
-    padding: 9px 4px;
+    padding: 8px 4px;
     border-radius: 2px
 }
 
@@ -1904,7 +1900,6 @@ button.logreg-btn {
     /* background: #4bd463
  */
     color: #EA4343;
-    font-size: 14px;
 }
 
 .grst-status>.unavailable {
@@ -1915,7 +1910,7 @@ button.logreg-btn {
     color: #666;
     font-size: 16px;
     padding-top: 12px;
-    width: 48%;
+    width: 54%;
     float: left;
     line-height: 20px;
 }
@@ -2848,9 +2843,7 @@ button.logreg-btn {
     box-shadow: 0 0 .25rem rgba(0,0,0,.2);
     position: relative;
     z-index: 1;
-    background-color: #fff;
-    padding: 0 2px;
-}
+    background-color: #fff;}
 
 .list_tab.fixed {
     position: fixed;
@@ -2878,8 +2871,6 @@ button.logreg-btn {
     /* background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f2e6), to(#f6f2e6)); */
     width: 50%;
     /* font-size: 16px; */
-    padding: 0px 2px 0px 18px;
-    border-left: 1px solid #EAEAEA;
 }
 .list_tab .current-tab{color:#fff}
 .list_tab a:after {
@@ -3197,6 +3188,3 @@ input,button,select,textarea{outline:none;line-height:25px;}
     text-align: center;
     height: 54px;
     margin: 0 auto;;}
-#page1{
-    padding-top: 3px;
-}
