@@ -2877,6 +2877,7 @@ button.logreg-btn {
     width: 50%;
     /* font-size: 16px; */
     padding: 0px 2px 0px 18px;
+    border-left: 1px solid #EAEAEA;
 }
 .list_tab .current-tab{color:#fff}
 .list_tab a:after {
