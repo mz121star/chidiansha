@@ -86,7 +86,7 @@ z-index: 99;">
 <div id="page2" style="display: none  ;padding-bottom: 120px ">
     <div class="cbox-post-wap cbox-post-b" style="position: fixed;bottom: 0px;width: 100%;box-shadow: 1px 4px 15px 10px;">
         <div class="fabuliuyan">   <button class="mdish-price" type="submit" onclick="$('#liuyanbox').show();$('.fabuliuyan').hide()">发布留言</button> </div>
-        <form name="form1" id="liuyanbox" method="post" action="__MODULE__/index/comment">
+        <form name="form1" id="liuyanbox" method="post" action="__MODULE__/index/comment" style="display: none">
         <input type="hidden" name="commentfood_id" value="{$foodinfo.food_id}">
         <div class="post-area-wap post-area-b">
             <textarea style="background-color: rgb(247, 247, 173);width: 80%;float: left;height:54px;border: 0;" name="comment_content" rows="3" class="area-text-wap area-text-b" placeholder="我来说两句...">不错！赞一个！</textarea>
