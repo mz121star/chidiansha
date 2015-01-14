@@ -3180,7 +3180,7 @@ input,button,select,textarea{outline:none;line-height:25px;}
     z-index: 20001;
 }
 .fabuliuyan button{background: #EA4343;
-box-shadow: none;
+    box-shadow: none;
     border: 0;
     width: 100%;
     line-height:52px;
