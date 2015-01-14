@@ -63,7 +63,7 @@ a, a:link, a:active, a:visited, a:hover
 {
     color: #000000;
     text-decoration: none;
-    padding-bottom: 0px;
+    padding-bottom: 8px;
 }
 pre
 {
@@ -1821,9 +1821,9 @@ button.logreg-btn {
 
 .geo-rst-list {
     /* background: #F7F7F7; */
-    margin-top: -21px;
+    margin-top: -20px;
     margin-bottom: 28px;
-    height: 83px;
+    height: 118px;
 }
 
 .grst-block {
@@ -1847,10 +1847,10 @@ button.logreg-btn {
 
 .grst-logo {
     display: block;
-    margin-right: 16px;
+    margin-right: 9px;
     border-radius: 3px;
-    width: 120px;
-    height: 70px;
+    width: 170px;
+    height: 95px;
     /* border-radius: 10px; */
     margin-top: 20px;
 }
@@ -1866,8 +1866,8 @@ button.logreg-btn {
     word-break: break-all
 ;
     color: #6F665A;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 42px;
+    margin-top: 14px;
 }
 
 .grst-name>.rst-badge-large {
